@@ -350,13 +350,13 @@ var DataStorageService = (function () {
         this.gInfoChanged = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["Subject"]();
         this.gEntries = [
             new __WEBPACK_IMPORTED_MODULE_2__shared_entry_entry_model__["a" /* Entry */]('Welcome to my General Blog', 'http://imgur.com/9r3ZUYA.jpg', 'Welcome to my first blog, hope you have a good time'),
-            new __WEBPACK_IMPORTED_MODULE_2__shared_entry_entry_model__["a" /* Entry */]('Welcome to my 2nd GBlog', 'http://imgur.com/9r3ZUYA.jpg', 'Welcome to my first blog, hope you have a good time'),
+            new __WEBPACK_IMPORTED_MODULE_2__shared_entry_entry_model__["a" /* Entry */]('Welcome to my 2nd GBlog', 'http://imgur.com/9r3ZUYA.jpg', 'This is another blog'),
         ];
         this.gFavorites = [
             new __WEBPACK_IMPORTED_MODULE_3__shared_favorites_favorite_model__["a" /* Favorite */]('Dance Dance Dance', 'http://i.imgur.com/LHNSRUX.jpg', 'Haruki Murakami'),
             new __WEBPACK_IMPORTED_MODULE_3__shared_favorites_favorite_model__["a" /* Favorite */]('Wind-up Bird Chronicles', 'http://i.imgur.com/GVA7O6P.jpg', 'Haruki Murakami'),
         ];
-        this.infoGeneral = 'This is the well info text box, where all the info related to the section are presented';
+        this.infoGeneral = 'Information on the General category';
     }
     DataStorageService.prototype.getGeneralEntries = function () {
         return this.gEntries.slice();
@@ -1341,7 +1341,7 @@ InfoComponent = __decorate([
 /***/ "../../../../../src/app/navi/start/start.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-xs-12\" style=\"margin: 0 auto; margin-top: 50px\">\n    <h1>Welcome to my blog</h1>\n  </div>\n</div>"
+module.exports = "<div class=\"row\">\n  <div class=\"col-xs-12 text-center\" style=\"margin: 0 auto; margin-top: 50px\">\n    <h1>Welcome to my blog</h1>\n    <br>\n    <h2>This blog is still under construction. </h2>\n    <h4>For now only the color-changing navi and some functionalities in the General category work.</h4>\n  </div>\n</div>"
 
 /***/ }),
 

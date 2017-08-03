@@ -672,8 +672,8 @@ var RecipeService = (function () {
         this.recipesChanged = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["Subject"]();
         this.desc = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo mollis purus sed vehicula. Morbi ipsum sapien, dictum eu erat nec, consectetur volutpat lorem. Mauris hendrerit massa et mi efficitur ullamcorper. Curabitur gravida congue lacus ut molestie. Sed ut magna vel sapien efficitur condimentum. Donec interdum, odio finibus commodo ornare, elit augue semper risus, a posuere enim sem eu turpis. Praesent sapien urna, tincidunt non maximus et, laoreet eget ante. Donec efficitur tempus quam, quis tincidunt ligula dictum et. Integer eu ante posuere, ultricies nibh et, porta lacus.';
         this.recipes = [
-            new __WEBPACK_IMPORTED_MODULE_2__recipe_model__["a" /* Recipe */]('Test Recipe', this.desc, 'http://www.seriouseats.com/images/2015/09/20150914-pressure-cooker-recipes-roundup-09.jpg', [new __WEBPACK_IMPORTED_MODULE_3__shared_ingredient_model__["a" /* Ingredient */]('meat', 1)]),
-            new __WEBPACK_IMPORTED_MODULE_2__recipe_model__["a" /* Recipe */]('Test Recipe2', this.desc, 'https://eat24-files-live.s3.amazonaws.com/cuisines/v4/chinese.jpg?Signature=cJOrJVMdszLtnSJ6u6C1TRsza%2B0%3D&Expires=1499349433&AWSAccessKeyId=AKIAIEJ2GCCJRT63TBYA', [new __WEBPACK_IMPORTED_MODULE_3__shared_ingredient_model__["a" /* Ingredient */]('meat', 1), new __WEBPACK_IMPORTED_MODULE_3__shared_ingredient_model__["a" /* Ingredient */]('pizza', 19)])
+            new __WEBPACK_IMPORTED_MODULE_2__recipe_model__["a" /* Recipe */]('Test Recipe', this.desc, 'http://i.imgur.com/hKozDMa.jpg', [new __WEBPACK_IMPORTED_MODULE_3__shared_ingredient_model__["a" /* Ingredient */]('meat', 1)]),
+            new __WEBPACK_IMPORTED_MODULE_2__recipe_model__["a" /* Recipe */]('Test Recipe2', this.desc, 'http://i.imgur.com/Qmwy1yP.jpg', [new __WEBPACK_IMPORTED_MODULE_3__shared_ingredient_model__["a" /* Ingredient */]('meat', 1), new __WEBPACK_IMPORTED_MODULE_3__shared_ingredient_model__["a" /* Ingredient */]('pizza', 19)])
         ];
     }
     RecipeService.prototype.getRecipes = function () {
