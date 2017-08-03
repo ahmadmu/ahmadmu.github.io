@@ -61,9 +61,10 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Bubblegum+Sans);", ""]);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Advent+Pro);", ""]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Saira+Semi+Condensed);", ""]);
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml body {\n  font-family: 'Advent Pro', sans-serif !important; }\n  html body .btn {\n    margin-bottom: 10px;\n    outline: none;\n    font-family: 'Advent Pro', sans-serif !important;\n    cursor: pointer; }\n  html body a.btn {\n    cursor: pointer; }\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nhtml body {\n  font-family: 'Saira Semi Condensed', sans-serif !important; }\n  html body h1 {\n    font-family: 'Advent Pro', sans-serif !important; }\n  html body .btn {\n    margin-bottom: 10px;\n    outline: none;\n    font-family: 'Advent Pro', sans-serif !important;\n    cursor: pointer; }\n  html body a.btn {\n    cursor: pointer; }\n", ""]);
 
 // exports
 

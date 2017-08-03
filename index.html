@@ -2,41 +2,57 @@
 <html>
 
     <head>
-        <title>Ahmad's Playground</title>
+        <title>Ahmad's Showcase</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Indie+Flower" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
         <style>
+            .container{
+                font-family: 'Saira Semi Condensed', sans-serif;
+            }
+            h1 {
+                font-family: 'Indie Flower', cursive;
+            }
             img {
-                width: auto;
-                height: 400px;
+                border-radius: 2px;
+            }
+            p {
+                margin: 8px;
+            }
+            #header {
+                padding: 40px;
+            }
+            .thumbnail {
+                padding: 0px;
+            }
+            a:hover {
+                text-decoration: none;
             }
         </style>
     </head>
 
     <body>
         <div class="container text-center">
-            <h1>Ahmad Moudallal</h1>
+            <div id="header">
+                <h1>Ahmad Moudallal</h1>
+                <p>Source code for the projects here can be found on my <a href="https://github.com/ahmadmu/projects">github</a></p>
+            </div>
              <div class="row">
-                 <div class="col-xs-6">
-                     <div class="thumbnail">
-                       <img class="img-responsive" src="http://i.imgur.com/XUNJVRp.png" alt="Burogi">
-                       <a href="./shoppinglist/index.html">Shopping list</a>
-                     </div>
+                <div class="col-md-4">
+                    <a href="https://mudquat.herokuapp.com/"><img class="img-responsive thumbnail" src="http://i.imgur.com/Qw0xP0o.png" alt="YoCamp"></a>
+                    <a href="https://mudquat.herokuapp.com/"><p>YoCamp</p></a>
+                    <p>Node.js, Express and MongoDB backend project made as a review exercise for Udemy Course <a href="https://www.udemy.com/the-web-developer-bootcamp/">The Web Developer Bootcamp</a> w/ bootstrap </p>
+                </div>
+                 <div class="col-md-4">
+                    <a href="./shoppinglist/index.html"><img class="img-responsive thumbnail" src="http://i.imgur.com/XUNJVRp.png" alt="Burogi"></a>
+                    <a href="./shoppinglist/index.html"><p>Shopping list</p></a>
+                    <p>Angular Project build as a review exercise for Udemy course <a href="https://www.udemy.com/the-complete-guide-to-angular-2/">Angular 4 - The Complete Guide</a>. w/ bootstrap</p>
                  </div>
-                 <div class="col-xs-6">
-                     <div class="thumbnail">
-                        <img class="img-responsive" src="http://i.imgur.com/XUNJVRp.png" alt="Burogi">
-                        <a href="./burogi/index.html">Burogi</a>
-                        <p></p>
-                     </div>
-                 </div>
-                 <div class="col-xs-6">
-                     <div class="thumbnail">
-                        <img class="img-responsive" src="http://i.imgur.com/Qw0xP0o.png" alt="YoCamp">
-                        <a href="https://mudquat.herokuapp.com/">YoCamp</a>
-                        <p></p>
-                     </div>
+                 <div class="col-md-4">
+                    <a href="./burogy/index.html"><img class="img-responsive thumbnail" src="http://i.imgur.com/XUNJVRp.png" alt="Burogi"></a>
+                    <a href="./burogy/index.html"><p>Burogi - <span class="text-danger"> not completed </span></p></a>
+                    <p>A blog project made (so far) by Angular as a practice for MongoDB Express.js Angular Node.js features. w/ bootstrap, scss </p>
                  </div>
              </div>
 
@@ -44,8 +60,11 @@
 
         <script>
             $(document).ready(function () {
-
-                    // jQuery methods go here...
+                $('img').hover( function () {
+                    $(this).css('opacity', '0.8');
+                }, function() {
+                    $(this).css('opacity', '1');
+                })
 
             });
         </script>
