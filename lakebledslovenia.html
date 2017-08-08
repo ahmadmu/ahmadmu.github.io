@@ -3,6 +3,7 @@
 
     <head>
         <title>Lake Bled</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1"> 
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,8 +23,6 @@
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
         <style>
             body, html {
                 font-family: 'Saira Semi Condensed' , sans-serif;
@@ -35,6 +34,7 @@
                 position: fixed;
                 background-color: black !important;
                 z-index:999;
+                opacity: 0.8;
             }
             nav {
                 -webkit-transition: all 0.5s ease;
@@ -68,7 +68,7 @@
             }
             #con3 {
                 background-image: url('http://i.imgur.com/qcMu5AH.jpg');
-                height: 50%;
+                height: 75%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -80,10 +80,11 @@
                 height: 120%;
                 display: block;
                 padding: 5%;
+                
             }
             #con5 {
                 background-image: url('http://i.imgur.com/OXz5XkQ.jpg');
-                height: 50%;
+                height: 75%;
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -133,17 +134,17 @@
                 opacity: 0.7;
             }
             .modal {
-                display: none; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                z-index: 1; /* Sit on top */
-                padding: 25px;  /*Location of the box  */
+                display: none; 
+                position: fixed; 
+                z-index: 1; 
+                padding: 25px;  
                 left: 0;
                 top: 0;
-                width: 100%; /* Full width */
-                height: 100%; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgb(0,0,0); /* Fallback color */
-                background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+                width: 100%; 
+                height: 100%; 
+                overflow: auto; 
+                background-color: rgb(0,0,0); 
+                background-color: rgba(0,0,0,0.9); 
                 max-height: 100%;
 
             }
@@ -152,11 +153,12 @@
                 display: block;
                 width: auto;
                 max-width: 100%;
-                height: 100%;
+                height: auto;
                 max-height: 100%;
                 background-position: center;
                 background-repeat:   no-repeat;
                 background-size:     cover;
+                border-radius: 4px;
             }
             .close {
                 position: absolute;
@@ -212,18 +214,18 @@
             <a href="#con1"><button id="myBtn" title="Go to top" class=""><span class="material-icons">arrow_upward</span></button></a>
                 <nav class="transparent z-depth-0" id="top">
                 <div class="nav-wrapper">
-                    <strong><a href="#" class="brand-logo">Lake Bled</a></strong>
+                    <strong><a href="#con1" class="brand-logo">Lake Bled</a></strong>
                     <ul id="nav-bar" class="right hide-on-med-and-down">
                         <li><a href="#con2">About</a></li>
                         <li><a href="#con4">Pictures</a></li>
-                        <li><a href="#con5">References</a></li>
+                        <li><a href="#con6">References</a></li>
                     </ul>
                     <ul id="slide-out" class="side-nav center">
                         <li style="color: black;"><h3>Lake Bled</h1></li>
                             <hr>
                         <li><a href="#con2">About</a></li>
                         <li><a href="#con4">Pictures</a></li>
-                        <li><a href="#con5">References</a></li>
+                        <li><a href="#con6">References</a></li>
                     </ul>
                     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                 </div>
@@ -321,9 +323,9 @@
                 $(window).on('scroll', function() {
                     scrollFunction();
                 });
-                // $('#myBtn')
+
                 function scrollFunction() {
-                    if(document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) { 
+                    if($('body').scrollTop() > 20 || document.documentElement.scrollTop > 20) { 
                         $('#myBtn').css('display', 'block');
                         $('nav').addClass('fixedNav');
                         $('nav').removeClass('z-depth-0');
@@ -333,11 +335,13 @@
                         $('nav').addClass('z-depth-0');
                     }
                 }
-                 function topFunction() {
-                     document.body.scrollTop = 0; 
-                     document.documentElement.scrollTop = 0;
-                 }
                  $(".button-collapse").sideNav();
+                 $('a').click(function () {
+                        $('html, body').animate({
+                            scrollTop: $($(this).attr('href')).offset().top
+                        }, 1400);
+                        return false;
+                    });
             });
         </script>
 
