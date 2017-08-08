@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Lake Bled</title>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Materialize.css -->
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+        <!-- Bootstrap -->
+        <!-- <script src=" https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
+
+        <!-- Fonts  -->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Indie+Flower" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+        <style>
+            body, html {
+                font-family: 'Saira Semi Condensed' , sans-serif;
+                height: 100%;
+                font-size: 15px;
+                
+            }
+            .fixedNav {
+                position: fixed;
+                background-color: black !important;
+                z-index:999;
+            }
+            nav {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+
+            }
+            nav.transparent div.nav-wrapper {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            /* nav.transparent div.nav-wrapper a {
+                color: black;
+            } */
+            #con1 {
+                background-image: url('http://i.imgur.com/S2RQH7O.jpg');
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                color: white;
+                background-attachment: fixed;
+                display: block;
+            }
+            #con2 {
+                display: block;
+                text-align: center;
+                height: 75%;
+                padding: 5%;
+            }
+            #con3 {
+                background-image: url('http://i.imgur.com/qcMu5AH.jpg');
+                height: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                color: white;
+                background-attachment: fixed;
+                display: block;
+            }
+            #con4 {
+                height: 120%;
+                display: block;
+                padding: 5%;
+            }
+            #con5 {
+                background-image: url('http://i.imgur.com/OXz5XkQ.jpg');
+                height: 50%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                color: white;
+                background-attachment: fixed;
+                display: block;
+            }
+            #con6 {
+                 display: block;
+                text-align: center;
+                height: 60%;
+                padding: 5%;
+
+            }
+            div.c {
+                margin: 0 auto;
+                position: absolute;
+                left: 0%;
+                top: 35%;
+                text-align: center;
+                width: 100%;
+            }
+            .brand-logo {
+                font-family: 'Indie Flower';
+            }
+            @media only screen and (max-device-width: 1024px) {
+                #con1 {
+                    background-attachment: scroll;
+                }
+            }
+            .img {
+                width:  400px;
+                height: 200px;
+                background-position: center;
+                background-repeat:   no-repeat;
+                background-size:     cover;
+                margin-left: 10px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                border-radius: 5px;
+                opacity: 0.9;
+                max-width: 100%;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .img:hover {
+                opacity: 0.7;
+            }
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding: 25px;  /*Location of the box  */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+                max-height: 100%;
+
+            }
+            .modal-content {
+                margin: 0 auto;
+                display: block;
+                width: auto;
+                max-width: 100%;
+                height: 100%;
+                max-height: 100%;
+                background-position: center;
+                background-repeat:   no-repeat;
+                background-size:     cover;
+            }
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            @media only screen and (max-width: 700px){
+                .modal-content {
+                    width: 100%;
+                }
+            }
+            .footer {
+                clear: both;
+                position: relative;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 1rem;
+                background-color: #efefef;
+                text-align: center;
+            }
+            #myBtn {
+                display: none; 
+                position: fixed; 
+                bottom: 20px; 
+                right: 30px; 
+                z-index: 99; 
+                border: none; 
+                outline: none; 
+                color: black; 
+                cursor: pointer;
+                padding: 15px; 
+                border-radius: 100px;
+            }
+            #myBtn:hover {
+                background-color: #555;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-fluid" id="con1">
+            <a href="#con1"><button id="myBtn" title="Go to top" class=""><span class="material-icons">arrow_upward</span></button></a>
+                <nav class="transparent z-depth-0" id="top">
+                <div class="nav-wrapper">
+                    <strong><a href="#" class="brand-logo">Lake Bled</a></strong>
+                    <ul id="nav-bar" class="right hide-on-med-and-down">
+                        <li><a href="#con2">About</a></li>
+                        <li><a href="#con4">Pictures</a></li>
+                        <li><a href="#con5">References</a></li>
+                    </ul>
+                    <ul id="slide-out" class="side-nav center">
+                        <li style="color: black;"><h3>Lake Bled</h1></li>
+                            <hr>
+                        <li><a href="#con2">About</a></li>
+                        <li><a href="#con4">Pictures</a></li>
+                        <li><a href="#con5">References</a></li>
+                    </ul>
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+                </div>
+            </nav>
+            
+            <div class="c">
+                <h1>Lake Bled</h1>    
+                <h4>Welcome to the Lake Bled Website</h4>
+            </div>    
+            
+        </div>
+        <div class="container" id="con2">
+            <h1>About</h1>
+            <p >Lake Bled is a lake in the Julian Alps of the Upper Carniolan
+            region of northwestern Slovenia, where it adjoins the town of Bled. The area is a tourist destination. The lake
+            is 35 km (22 mi) from Ljubljana International Airport and 55 km (34 mi) from the capital city, Ljubljana.</p>
+            <p >The World Rowing Championships in 1966, 1979, 1989, and 2011 were held at Lake Bled.</p>
+            <p >The lake surrounds Bled Island (Blejski otok). The island has several buildings, the main one being the pilgrimage church
+            dedicated to the Assumption of Mary (Cerkev Marijinega vnebovzetja), built in its current form near the end of
+            the 17th century, and decorated with remains of Gothic frescos from around 1470 in the presbyterium and rich
+            Baroque equipment.</p>
+        </div>
+
+        <div id="con3">
+        </div>
+        <div class="container-fluid center" id="con4">
+            <h1>Pictures</h1>
+            <div class="row">
+                <div class="col s6 m6 l4">
+                     <img src='http://i.imgur.com/rtOqon6.jpg' class="img ">
+                </div>
+                <div class="col s6 m6 l4">
+                     <img src='http://i.imgur.com/2izsOYB.jpg' class="img">
+                </div>
+                <div class="col s6 m6 l4">
+                     <img src='http://i.imgur.com/tFm3kWQ.jpg' class="img">
+                </div>
+                <div class="col s6 m6 l4">
+                     <img src='http://i.imgur.com/GsASeeN.jpg' class="img">
+                </div>
+                <div class="col s6 m6 l4">
+                     <img src='http://i.imgur.com/ZKXhFdW.jpg' class="img">
+                </div>
+                <div class="col s6s m6 l4">
+                     <img src='http://i.imgur.com/rgWGDgU.jpg' class="img">
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+
+                <span class="close">X</span>
+
+                <img src="" class="modal-content"></div>
+            </div>
+        </div>
+        
+        <div id="con5">
+
+        </div>
+
+        <div class="container" id="con6">
+            <h1>References</h1>
+            <p>Background pictures by the amazing people at Unsplash</p>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;"
+                href="https://unsplash.com/@aleskrivec?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+                target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Krivec"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Ales Krivec</span></a>
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;"
+                href="https://unsplash.com/@sapegin?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+                target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Artem Sapegin"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title></title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Artem Sapegin</span></a>
+            <p>The other pictures are from <a href="https://en.wikipedia.org/wiki/Lake_Bled">Wikipedia</a>, <a href="https://lakebledslovenia.com/">lakebledslovenia.com</a>, and <a href="https://www.slovenia.info/">slovenia.info</a></p>
+        </div>
+
+        <div class="footer">
+            This website was made by Ahmad Moudallal. <a href="https://ahmadmu.github.io/">Ahmad's Showcase</a>.
+        </div>
+        
+        <script>
+            $(document).ready(function () {
+                let modal = $('#myModal');
+                let modalContent = $('.modal-content');
+
+                $('.img').on('click', function(){
+                    let src = $(this).attr('src');
+                    // console.log(src);
+                   
+                    modalContent.attr('src', src);
+                    // console.log(modalContent.attr('src'));
+                    modal.css('display', 'block');
+                    $('nav').removeClass('fixedNav');
+                });
+                $('.close').on('click', function(){
+                   $(modal).css('display', 'none');
+                   $('nav').addClass('fixedNav ');
+                });
+                
+                $(window).on('scroll', function() {
+                    scrollFunction();
+                });
+                // $('#myBtn')
+                function scrollFunction() {
+                    if(document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) { 
+                        $('#myBtn').css('display', 'block');
+                        $('nav').addClass('fixedNav');
+                        $('nav').removeClass('z-depth-0');
+                    } else {
+                        $('#myBtn').css('display', 'none');
+                        $('nav').removeClass('fixedNav');
+                        $('nav').addClass('z-depth-0');
+                    }
+                }
+                 function topFunction() {
+                     document.body.scrollTop = 0; 
+                     document.documentElement.scrollTop = 0;
+                 }
+                 $(".button-collapse").sideNav();
+            });
+        </script>
+
+    </body>
+
+</html>
