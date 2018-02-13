@@ -1,0 +1,98 @@
+= Test-Plan
+
+Dieser Testplan stellt eine vereinfachte Version der IEEE 829-1998 Vorlage dar.
+
+== Einführung
+Wozu dient das Dokument? Zielgruppe?
+
+Dieses Dokument liefert eine Übersicht über alle zu testenden Funktionalitäten der Anwendung in form von kleinen, Funktionsspezifischen Unit-Tests und größeren Interaktiveren Integration-Tests. Des weiteren liefert dieses Dokument zu jedem dieser Tests was bei welcher möglichen Eingabe in eine FUnktion für ein Ergebis zu erwarten ist. 
+
+Die Zielgruppe ist zum einen das Entwicklerteam selbst, um sich unter anderem mit hilfe des Testsplans einen Überblick über die zu implementierenden Tests zu machen, zum anderen um eine Hilfestellung zum Debuggen zu haben. Zum anderen ist es eine gute Möglichkeit für Tester herauszufinden was in der anwendung möglich sein soll, und was z.B. zu Bugs oder anderen Fehlern führt (Eingabe<->Ausgabe).
+
+== Aufbau der Testbezeichner
+Nach welchem Schema sind die Tests benannt?
+
+*Bsp.*
+
+*U - Unit Test, I - Integrationstest*
+
+*U-1, U-2, I-1*
+
+== Test Gegenstände
+
+== Zu testende Funktionalitäten
+
+Alle Funktionen die in den Managern der jeweiligen Controller enthalten sind und nicht direkt aus Salespoint kommen.
+
+== Nicht zu testende Funktionalitäten
+z.B. Bibliotheken von Drittanbietern (eigene Tests beschränken sich auf Schnittstelle, bzw. Zusammenspiel).
+
+Funktionsaufrufe aus Salespoint.
+
+== Herangehensweise
+*Bsp.:*
+
+*Klassen werden mit JUnit getestet.*
+
+*Integrationstest nach Bottom-Up Prinzip*
+
+== Umgebungsvoraussetzungen
+* Wird spezielle Hardware benötigt?
+** nein
+* Welche Daten müssen bereitgestellt werden? Wie werden die Daten bereitgestellt?
+** JUnit-Tests, per ...
+* Wird zusätzliche Software für das Testen benötigt?
+** JUnit
+* Wie kommuniziert die Software während des Testens? Internet? Netzwerk?
+** JUnit
+
+== Testfälle und Verantwortlichkeit
+Jede testbezogene Aufgabe muss einem Ansprechpartner zugeordnet werden.
+
+// See http://asciidoctor.org/docs/user-manual/#tables
+[options="headers"]
+|===
+|ID |Anwendungsfall |Vorbedingungen |Eingabe |Ausgabe
+|U-1.1   |LogIn              |Nutzer befindet sich unangemeldet auf der welcome.html Bereich              |Eingabe falscher Benutzername       |Fehlermeldung:"Anmeldung nicht möglich, bitte überprüfen sie Benuzername und Passwort"
+|U-1.2   |LogIn              |Nutzer befindet sich unangemeldet auf der welcome.html      |Eingabe falsches Passwort       |Fehlermeldung:"Anmeldung nicht möglich, bitte überprüfen sie Benuzername und Passwort"
+|U-1.3   |LogIn              |Nutzer befindet sich unangemeldet auf der welcome.html              |Eingabe richtiger Benutzername und richtiges Passwort       |Nutzer wird eingelogged und auf die index.html geleitet
+|U-2 |LogOut |Nutzer ist angemeldet | Klick auf LogOut Button| Nutzer wird ausgelogged und auf die welcome.html geleitet
+|U-3.1 |Registration |Nutzer befindet sich unangemeldet auf der welcome.hmtl |Eingabe von Nachname, Vorname, ungültige EMail, Anschrift, Passwort| Fehlermeldung:"Keine gültige Email, bitte überprüfen sie die Schreibweise!"
+|U-3.2 |Registration |Nutzer befindet sich unangemeldet auf der welcome.hmtl |Eingabe von Nachname, Vorname, gültiger vergebener EMail, Anschrift, Passwort|Fehlermeldung:"Diese Email ist bereits im System registriert!"
+|U-3.3 |Registration |Nutzer befindet sich unangemeldet auf der welcome.hmtl |Eingabe von Nachname, Vorname, gültiger EMail, Anschrift, Passwort|Nutzer wird im System registriert, eingeloggt und auf die inde.html geleitet
+|U-4.1 |EmployeeRegistration |Nutzer ist Boss, befindet sich in der newEmployee.html |Eingabe von Nachname, Vorname, ungültige EMail, Anschrift, Berechtigung, musterPasswort| Fehlermeldung:"Keine gültige Email, bitte überprüfen sie die Schreibweise!"
+|U-4.2 |EmployeeRegistration |Nutzer ist Boss, befindet sich in der newEmployee.html |Eingabe von Nachname, Vorname, gültige vergebene EMail, Anschrift, Berechtigung, musterPasswort| Fehlermeldung:"Diese EMail ist bereits im System registriert!"
+|U-4.3 |EmployeeRegistration |Nutzer ist Boss, befindet sich in der newEmployee.html |Eingabe von Nachname, Vorname, gültige EMail, Anschrift, Berechtigung, musterPasswort| Employeekonto wird mit jeweiligen Berechtigungen erstellt, Nutzer wird auf employeeList.html geleitet
+|U-5.1 |BusinessCustomerRegistration |Nutzer ist SalesManager, befindet sich in der BusinessCustomer.html |Eingabe von Nachname, Vorname, ungültige EMail, Anschrift, musterPasswort| Fehlermeldung:"Keine gültige Email, bitte überprüfen sie die Schreibweise!"
+|U-5.2 |BusinessCustomerRegistration |Nutzer ist SalesManager, befindet sich in der newBusinessCustomer.html |Eingabe von Nachname, Vorname, gültige vergebene EMail, Anschrift, musterPasswort| Fehlermeldung:"Diese EMail ist bereits im System registriert!"
+|U-5.3 |BusinessCustomerRegistration |Nutzer ist SalesManager, befindet sich in der newBusinessCustomer.html |Eingabe von Nachname, Vorname, gültige EMail, Anschrift, musterPasswort| BusinessCustomerKonto wird mit jeweiligen erstellt, Nutzer wird auf businessCustomerList.html geleitet
+|U-6.1 |PrivateAccountDeactivation |Nutzer ist PrivateCustomer, befindet sich in accountData.html |Eingabe von falschem AccountPW + deaktivieren Knopf |Fehlermeldung:"Falsches Passwort!"
+|U-6.2 |PrivateAccountDeactivation |Nutzer ist PrivateCustomer, befindet sich in accountData.html |Eingabe von AccountPW + deaktivieren Knopf |Account wird deaktiviert, Nutzer wird auf welcome.html geleitet
+|U-7.1 |EmployeeAccountDeactivation |Nutzer ist Boss, befindet sich in employeeList.html |deaktivieren Knopf an einem employee + Eingabe von falschem bossPW |Fehlermeldung:"Falsches Passwort!"
+|U-7.2 |EmployeeAccountDeactivation |Nutzer ist SalesManager, befindet sich in employeeList.html |deaktivieren Knopf an einem businessCustomer + Eingabe von bossPW |jeweiliger Account wird deaktiviert, aus der Liste entfernt
+|U-8.1 |BusinessAccountDeactivation |Nutzer ist SalesManager, befindet sich in businessCustomerList.html |deaktivieren Knopf an einem businessCustomer + Eingabe von falschem salesManagerPW |Fehlermeldung:"Falsches Passwort!"
+|U-8.2 |BusinessAccountDeactivation |Nutzer ist SalesManager, befindet sich in businessCustomerList.html |deaktivieren Knopf an einem businessCustomer + Eingabe von salesManagerPW |jeweiliger Account wird deaktiviert, aus der Liste entfernt
+|U-9.1 |Checkbook CalculateBalance |Nutzer ist Boss oder Accountant, befindet sich in checkbook.html |Eingabedaten sind alle Ausgaben und Einnahmen in einem Bestimmten Zeitfenster |Profit
+|U-9.2 |Checkbook searchCustomer |Nutzer ist Boss oder Accountant, befindet sich in checkbook.html |Orderlist + Customer |Alle Bestellungen des eingegebenen Customers
+|U-9.3 |Checkbook searchOrder |Nutzer ist Boss oder Accountant, befindet sich in checkbook.html |Orderlist + OrderID |Die Bestellung mit der ID
+|U-9.4 |Checkbook searchOrderType |Nutzer ist Boss oder Accountant, befindet sich in checkbook.html |Orderlist + OrderType |Alle Bestellungen diesen Typs
+|U-9.5 |Checkbook searchDate |Nutzer ist Boss oder Accountant, befindet sich in checkbook.html |Orderlist + Date |Alle Bestellungen von diesem Datum
+|U-9.6 |Checkbook searchDateToDate |Nutzer ist Boss oder Accountant, befindet sich in checkbook.html |Orderlist + Date1 + Date2 |Alle Bestellungen vom ersten Datum bis zum zweiten Datum
+|U-10.1 |Stock orderManuel |Nutzer ist StockManager, befindet sich in Stock.html |Eingabe einer Menge in einer Produktzeile |Quantity wird um diese Anzahl erhöht
+|U-10.2 |Stock searchForBest |Quantity eines Produkts im inventory fällt unter sein minAmount |Produkt + Anbieterliste |Quantity des Produkts wird um x erhöht
+|U-11.1 |TradeIn |Nutzer ist PrivateCustomer, befindet sich in cIObject.html |pressen auf Button für den Verkauf eines Object-bestandteils |Erstellen einer Sell-Order und hinzufügen dieser in die OrderList
+|U-11.2 |TradeIn check |Nutzer ist SalesManager, befindet sich in order.html |Eingabe eines zu hohen Preises + senden| Fehlermeldung:"Der Preis ist zu hoch!"
+|U-11.3 |TradeIn calculateMax |Erstellen einer Sell-Order |Sell-Order, Order des Produkts | maximaler Rückkaufpreis
+|U-11.4 |TradeIn check |Nutzer ist SalesManager, befindet sich in order.html |Eingabe eines Preises + senden|PrivateCustomer der Sell-Order erhält den Preis als Vorschlag
+|U-11.5 |TradeIn checkCheck |Nutzer ist PrivateCustomer, befindet sich an Verkaufspreisvorschlags in OrderState.html |Ablehnen | Sell-Order wird storniert
+|U-11.6 |TradeIn checkCheck |Nutzer ist PrivateCustomer, befindet sich an Verkaufspreisvorschlags in OrderState.html |Annehmen | Produkt wird aus dem Bestand des PrivateCustomers Entfernt, Preis wird af sein Konto überwiesen, Orderstatus wird auf abgeschlossen gesetzt
+|U-12 |Place ServiceOrder |Nutzer ist Customer, befindet sich in cIObject.html |druck service-button |Erstellen einer Service-Order und hinzufügen derer in die OrderList, Nutzer wird in orderState.html geleitet
+|U-13.1 |AddToCart |Nutzer ist Customer, befindet sich in ArticleDetails.html |Anzahl<=Quantity + button-ZumWarenkorbHinzufügen | Produkt wird zum Warenkorb in der Anzahl hinzugefügt und aus dem Stock entfernt, Nutzer wird in shop.html geleitet
+|U-13.2 |AddToCart |Nutzer ist Customer, befindet sich in ArticleDetails.html |Anzahl>Quantity + button-ZumWarenkorbHinzufügen |Fehlermeldung: "Produkt ist nicht so oft Verfügbar, das Lager wird informiert!"
+|U-14.1 |RemoveFromCart |Nutzer ist Customer, befindes sich in cart.html |Anzahl<QuantityImCart + Entfernen-button + Produkt | Produkt wird in dieser Anzahl aus dem Warenkorb entfernt, Nutzer wird in cart.html geleitet
+|U-14.2 |RemoveFromCart |Nutzer ist Customer, befindes sich in cart.html |Anzahl>=QuantityImCart + Entfernen-button + Produkt | Produkt wird aus dem Warenkorb entfernt, QuantityImCart wird für dieses Produkt dem Lager wieder hinzugefügt, Nutzer wird in cart.html geleitet
+|U-15.1 |PlaceOrder checkCredit|Nutzer ist Customer, befindet sich in cart.html |Drückt kauf-Button während Guthaben<GesamtPreis |Fehlermeldung: "Es tut uns leid, aber ihr Konto deckt nicht den Betrag der Bestellung"
+|U-15.2 |PlaceOrder checkCredit|Nutzer ist Customer, befindet sich in cart.html |Drückt kauf-Button während Guthaben>=GesamtPreis |Order mit cart-inhalt wird erstellt und der OrderList hinzugefügt
+|U-15.3 |CheckOrder |Nutzer ist SalesManager, befindet sich in orderList.html |Drückt Ablehnen-Button |Order wird storniert, Produkte wieder dem Stock hinzugefügt, Customer erhält Nachricht in seine orderState
+|U-15.4 |CheckOrder |Nutzer ist SalesManager, befindet sich in orderList.html |Drückt Annehmen-Button |Orderstate wird auf abgeschlossen gesetzt, Produkte werden dem jeweiligen customerInventory hinzugefügt, Customer erhält Nachricht in seine orderState, Bestellkjosten weden vom Konto des Customers abgezogen
+|===

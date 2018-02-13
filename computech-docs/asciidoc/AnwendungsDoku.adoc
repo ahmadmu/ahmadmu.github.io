@@ -1,0 +1,91 @@
+= Benutzer Handbuch
+:toc: macro 
+
+== Inhaltsverzeichnis
+toc::[]
+
+== Rollenseitige Zugriffsberechtigung
+=== Boss
+
+Der Boss hat Zugriff auf die Mitarbeiterverwaltung und die Finanzübersicht
+
+=== Buchhalter
+
+Der Buchhalter hat Zugriff auf die Finanzübersicht.
+
+=== Service
+
+Der ServiceMitarbeiter hat Zugriff auf Service-Orders, und ist in der Lage dise anzunehmen/Reparaturanfragen auszuführen und zu erfüllen.
+
+=== SalesManager
+
+Der SalesManager hat die volle Kontrolle über alle Anträge, außer die des Services. Er kann neue Geschäftskunden anlegen oder deaktivieren. Auch hier ist ein löschen aus dem System nicht möglich.
+Außerdem steht dem SalesManager eine Übersicht über seine eigen-angelegten Geschäftskunden zur Verfügung. Des weiteren kan ner nur vonseinen eigenen
+Geschäftskunden die Bestellungen einsehen. Er kann jedoch alle Bestellungen aller Privatkunden in der Bestellübersicht managen. Auch hat er eine Übersicht über alle bisher abgelehnten oder erfüllten Bestellungen.
+Ablehnen oder annehmen von Bestellungen erfolgt per Knopfdruck und der Willkür der SalesManager in der Bestellübersicht.
+
+=== Lagermanager
+
+Der Lagermanager besitzt die Rechte, im Lager nachzubestellen, Gegenstände aus dem Verkaufsinventar zu entfernen, sie hinzuzufügen oder zu bearbeiten.
+
+=== Privatkunden
+
+Privatkunden können sich auf der Startseite registrieren und genießen alle Möglichkeiten der Anwendung. Sie können sich Einzelteile bestellen, oder ein Gesamtpaket erstehen.
+Dieses können sie Upgraden, oder Einzelteile verkaufen bzw. Service/Reparaturanfragen stellen.
+
+=== Geschäftskunden
+
+Können prinzipiell das selbe wie Privatkunden, genießen aber einen 10% Rabatt auf alle Einkäufe, und müssen sich "persönlich" über einen SalesManager registrieren lassen.
+
+== Seiten
+
+=== Mitarbeiterverwaltung
+Hier hat der Boss die Möglichkeit, neue Mitarbeiter anzulegen, zu bearbeiten, oder Konten dieser zu deaktivieren. 
+Löschen ausdem System ist NICHT möglich.
+
+=== Finanzübersicht
+Hier haben der Boss und der Buchhalter eine Übersicht über die Ausgaben und Einnahmen der Firma, wobei unter Einnahmen Serviceaufträge, Bestellungen und Upgrades fallen.
+Ausgaben beziehen sich auf den Rückkauf von PC-Komponenten von Nutzern und das Auffüllen des Inventars im Lager.
+
+=== Bestellübersicht
+
+Auf die Bestellübersicht haben nur SalesManager Zugriff. Hier können alte Bestellungen iengesehen werden, oder neue, noch offene Bestellungen
+angenommen oder abgelehnt werden. Bei einer TradeIn Bestellung, also einem Rückkauf, wird ein zusätzliches Fenster geöffnet, in dem der SalesManager
+einen nach ben begrenzten Preis eintragen kann, der dem Ersteller der Anfrage dann überwiesen wird.
+
+=== Accountübersicht
+
+Jeder Nutzer der Anwendunghat die Möglihckeit oben Rechts auf seinen Namen zu klicken, um dort seine Daten einsehen und bearbeiten zu können.
+
+=== Lager
+
+Auf das Lager hat nur der Boss und der LagerManager zugriff. Hier können Artikel aus dem Sortiment entfernt, zu ihm hinzugefügt, oder Bearbeitet werden.
+Desweiteren besteht hier die Möglihckeit Artikel manuell nachzubestellen, in der Größenordnung von 1-50 begrenzt. Produkte werden nach Bedarf automatisch nachbestellt.
+Dies erfolgt in entweder, wenn die durch eine Bestellung angeforderte Anzahl die des Lagers übersteigt, hierbei wird der Betrag der Bestellung einfach nachbestellt.
+Oder die Nachbestellung erfolgt automatisch, wenn durch den Verwand die anzahl eines Produktes im Lager unter die gewünschte Nazhal des Artikels fällt.
+In diesem Szenario wird das doppelte der Mindestanzahl nachbestellt.
+
+Das Nachbestellen erfolgt aus einer Auswahl an Anbietern. Es wird immer das Billigste Nachbestellt.
+
+=== Lagerfinanzen
+
+Auf die Lagerfinanzen haben Boss und LagerManager zugriff. Hier werden alle Nachbestellungen, ob automatisch oder manuell, des Lagers aufgelistet.
+
+=== Shop
+
+Im Shop haben die Nutzer die Möglichkeit sich umzuschauen und auf ein Artikel zu klicken um eine Detailbeschreibung dessen zu erhalten.
+Die Navigation im Lager erfolgt über Filter. Des weiteren kann die Auswahl der Artikel nach Kriterien sortiert werden.
+
+=== ArtikelDetailÜbersicht
+
+Hier können die Kunden, von der Anzahl im Lager begrenzt, den jeweiligen Gegenstand zu ihrem Warenkorb hinzufügen. Des weiteren finden sie hier iene detailierte Beschreibung des Produktes.
+
+=== EDVBestand
+
+Dies ist die Kundeneigene Übersicht all ihrer Käufe (nicht konsumierbarer Artikel). Hier haben sie die Möglichkeit ihren Komplettsystem upzugraden, oder für einezelne Gegenstände eine Reparatur-
+anfrage zu stellen. AUch besteht die Möglichkeit, einzelne Produkte an die Firma zurück zu verkaufen.
+
+=== Rechnungen
+
+Bietet eine Aufführung über alle bisher getätigten Bestellungen in Form einer Rechnung für die Kunden.
+

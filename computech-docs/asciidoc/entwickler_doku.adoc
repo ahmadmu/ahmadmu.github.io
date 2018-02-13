@@ -1,0 +1,96 @@
+= Development Documentation / Entwicklerdokumentation
+
+== Introduction and Goals
+
+* Task
+
+The web application should run an online shop for the company CompuTech and should fulfill all the requirements mentioned in the Pflichtenheft.
+
+* Quality Goals
+
+[options="header"]
+|===
+|Quality Goals|Very Important|Important|Neutral|Not Important|Irrelevant
+|Usability|x||||
+|Functionality|x||||
+|Portabilty|||x||
+|Reliability||x|||
+|Effizienz||||x|
+|Maintainability||||x|
+|===
+
+== Boundaries
+* Hardware-Requirements
+
+- PC with an internet connection
+
+* Software-Requirements
+
+- Browser
+
+* Requirements to run the Software
+
+- Java JDK 1.8+
+- Maven 3.8+
+- Development Environment / IDE like Spring Tool Suite
+
+== Context Limits
+* Extern Interfaces
+
+[[context_diagram]]
+image::.\models\analysis\Kontextdiagramm\Kontextdiagramm.jpg[Context Diagram, 80%, 80%, pdfwidth=80%, title= "ContextDiagram", align=center]
+
+== Solution Strategy
+
+- Model View Controller
+
+- Thymeleaf for the view
+
+- Java for the Models and the Controllers
+
+== Building Blocks
+
+* Package-Diagramm
+
+[[package_Diagram]]
+image::.\models\design\PackageDiagram.jpg[Package Diagram, 80%, 80%, pdfwidth = 80%, title = "PackageDiagram", align = center]
+
+
+== Design Decisions
+
+* Architecture
+
+For the Architecture we used the Model-View-Controller architecture, where the softwares is split into models and views, and a controller that has the logic to connect them together. The views in this software are designed for the web using HTML, CSS and Javascript, and the models and controllers are designed with Java.
+
+[[context_diagram]]
+image::.\models\design\EKD_Nutzer_Account.jpg[Class Design Diagram, title= "Users", align=center]
+image::.\models\design\EKD_CustomerInventory.jpg[Class Design Diagram, title= "EDV", align=center]
+image::.\models\design\EKD_Shop.jpg[Class Design Diagram, title= "Shop", align=center]
+image::.\models\design\EKD_Order.jpg[Class Design Diagram, title= "Order", align=center]
+image::.\models\design\EKD_Accountancy.jpg[Class Design Diagram, title= "EKD", align=center]
+
+
+* Used Template
+
+* Persistence
+
+For the persistence an h2 database is used. The communication with the database happens through the SalesPoint Framework.
+
+* User Interface
+
+[[GUI]]
+image::.\models\design\bootstrap-gui-img\index.jpg[Hauptseite, title= "Index", align=center]
+image::.\models\design\bootstrap-gui-img\shop.png[Shop, title= "Shop", align=center]
+image::.\models\design\bootstrap-gui-img\detail.png[Produktdetails, title= "Product Detail", align=center]
+image::.\models\design\bootstrap-gui-img\registration.png[Registration, title= "Register", align=center]
+image::.\models\design\bootstrap-gui-img\login.png[Login, title= "Login", align=center]
+image::.\models\design\bootstrap-gui-img\edv.png[EDV-Liste, title= "EDV", align=center]
+image::.\models\design\bootstrap-gui-img\cart.png[Warenkorb, title= "Cart", align=center]
+image::.\models\design\bootstrap-gui-img\bc.png[Geschäftskunden, title= "Business Customers", align=center]
+image::.\models\design\bootstrap-gui-img\best.png[Bestseller, title= "Bestseller", align=center]
+image::.\models\design\bootstrap-gui-img\orders.png[Bestellungen, title= "Orders", align=center]
+image::.\models\design\bootstrap-gui-img\createComputer.png[Erstelle System, title= "CreateComputer", align=center]
+image::.\models\design\bootstrap-gui-img\stock.png[Lager, title= "Stock", align=center]
+image::.\models\design\bootstrap-gui-img\myOrders.png[Meine Orders, title= "myOrders", align=center]
+[appendix]
+== Glossar
