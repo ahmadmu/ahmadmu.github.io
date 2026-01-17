@@ -1,0 +1,123 @@
+{
+  "configVersion": 1,
+  "timestamp": 1768666810380,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chunk-6YCBGE5U.js",
+        "/chunk-7UAZOOWQ.js",
+        "/chunk-AIPM777X.js",
+        "/chunk-AIZVJUQQ.js",
+        "/chunk-E67LGGXQ.js",
+        "/chunk-Q4RPRLJU.js",
+        "/chunk-T2F3QQKD.js",
+        "/chunk-WDW27ADD.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main-FC5ZW4TH.js",
+        "/manifest.webmanifest",
+        "/polyfills-6ISPNSXF.js",
+        "/styles-PXG77GGH.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/font/OpenSans-Bold.ttf",
+        "/assets/font/OpenSans-Light.ttf",
+        "/assets/font/OpenSans-Regular.ttf",
+        "/icons/icon-128x128.png",
+        "/icons/icon-144x144.png",
+        "/icons/icon-152x152.png",
+        "/icons/icon-192x192.png",
+        "/icons/icon-384x384.png",
+        "/icons/icon-512x512.png",
+        "/icons/icon-72x72.png",
+        "/icons/icon-96x96.png",
+        "/media/OpenSans-Bold-474BUIDJ.ttf",
+        "/media/OpenSans-Light-HJ63MGDM.ttf",
+        "/media/OpenSans-Regular-UHVE43X5.ttf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "openlib-api",
+      "patterns": [
+        "https:\\/\\/openlibrary\\.org\\/search\\.json[^/]*[^/]*",
+        "https:\\/\\/covers\\.openlibrary\\.org\\/(?:.+\\/)?[^/]*\\.jpg",
+        "https:\\/\\/archive\\.org\\/download\\/(?:.+\\/)?[^/]*\\.jpg"
+      ],
+      "strategy": "performance",
+      "maxSize": 1000,
+      "maxAge": 2592000000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/assets/font/OpenSans-Bold.ttf": "953814da1b753763dfa5a7ecc18bdbb14890e16b",
+    "/assets/font/OpenSans-Light.ttf": "9292ee344b331c5959c7b130d1a2df5543dfa58a",
+    "/assets/font/OpenSans-Regular.ttf": "76ea5d4c70539ad9b0e7faf7e4fbe3bae8a961c7",
+    "/chunk-6YCBGE5U.js": "84730eea304ecd68ed1d1c7a838b9ddca66dcc32",
+    "/chunk-7UAZOOWQ.js": "688878db955d3a25427ac75a640b672884f89fec",
+    "/chunk-AIPM777X.js": "7d0aa630f55ecfc9feed7dcbcdc3da8e4da81bfc",
+    "/chunk-AIZVJUQQ.js": "d249c56827f8c697d4d9f4ab35a4675fd3652722",
+    "/chunk-E67LGGXQ.js": "1fa400eb41687473e7cacd5da8b1cf0a4fb2d1c2",
+    "/chunk-Q4RPRLJU.js": "780a77d467ec9aebf06bccb59b25a3895b93d4dd",
+    "/chunk-T2F3QQKD.js": "be2b2449394cec11bc3f0bec7db707e42f503b69",
+    "/chunk-WDW27ADD.js": "d2cc60de9c9ecee1c932e03639b2ee1f584b7600",
+    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/icons/icon-128x128.png": "f912963bdc6d5a38d8f1dd0afbaab2ce8d657acb",
+    "/icons/icon-144x144.png": "b155fd5f2fd5d2ea7760721063003c4cd95fd783",
+    "/icons/icon-152x152.png": "eae6e0f0c8afb8aaae339e2a569b43e9238e5e6c",
+    "/icons/icon-192x192.png": "15c4180454633880d98674aa7394656196c91584",
+    "/icons/icon-384x384.png": "94a915751ef6c9282df9aea405ad679230631814",
+    "/icons/icon-512x512.png": "1de182f76f7329dfa8f9fcdd1fdcdd695bea6a99",
+    "/icons/icon-72x72.png": "aa88a6096bd973be7f6d7a5489bfa6bc2463f8c4",
+    "/icons/icon-96x96.png": "7fb8f59c30ce2ff12c700321a0b39e14b3dc8f95",
+    "/index.html": "317bb6c8c194d2e2bef6d449779981d9462f2787",
+    "/main-FC5ZW4TH.js": "b021cf9deab15a4422238068761a0021683f7197",
+    "/manifest.webmanifest": "fb61641afa57732ddd5c8e46fddbc43ca7b461c9",
+    "/media/OpenSans-Bold-474BUIDJ.ttf": "953814da1b753763dfa5a7ecc18bdbb14890e16b",
+    "/media/OpenSans-Light-HJ63MGDM.ttf": "9292ee344b331c5959c7b130d1a2df5543dfa58a",
+    "/media/OpenSans-Regular-UHVE43X5.ttf": "76ea5d4c70539ad9b0e7faf7e4fbe3bae8a961c7",
+    "/polyfills-6ISPNSXF.js": "b15ba4d1036f2db285649ff775f184bcdcd0b08a",
+    "/styles-PXG77GGH.css": "35eb5b94ccb5970be5e75e1984c19986610b39ac"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
