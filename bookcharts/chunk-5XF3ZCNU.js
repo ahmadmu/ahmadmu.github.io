@@ -1,1 +1,0 @@
-import{va as e}from"./chunk-7IE5MXZS.js";var p=(()=>{class i{transform(r,t="L"){return`https://covers.openlibrary.org/b/isbn/${r.isbn||r.isbn13}-${t}.jpg`}static{this.\u0275fac=function(t){return new(t||i)}}static{this.\u0275pipe=e({name:"imgUrl",type:i,pure:!0})}}return i})();export{p as a};
