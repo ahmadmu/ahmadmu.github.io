@@ -1,0 +1,1 @@
+import{sa as e}from"./chunk-YSFECWYF.js";var o=(()=>{class i{transform(r,t="L"){return r.coverUrl?r.coverUrl:`https://covers.openlibrary.org/b/isbn/${r.isbn||r.isbn13}-${t}.jpg`}static{this.\u0275fac=function(t){return new(t||i)}}static{this.\u0275pipe=e({name:"imgUrl",type:i,pure:!0})}}return i})();export{o as a};
