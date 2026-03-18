@@ -1,6 +1,6 @@
 {
-  "name": "book-charts",
-  "short_name": "book-charts",
+  "name": "BookCharts",
+  "short_name": "BookCharts",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
