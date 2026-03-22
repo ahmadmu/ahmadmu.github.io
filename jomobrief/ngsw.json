@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1774180542746,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chunk-4LRGQ23M.js",
+        "/chunk-ASOXF6YN.js",
+        "/chunk-DOAUBBZL.js",
+        "/chunk-EPQV62DP.js",
+        "/chunk-EZ4IHYOX.js",
+        "/chunk-OCGM5B7Y.js",
+        "/chunk-RFSFFDG5.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main-P6BNTV7C.js",
+        "/manifest.webmanifest",
+        "/styles-2GTMOIPS.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/icons/apple-touch-icon.png",
+        "/icons/icon-192.png",
+        "/icons/icon-512.png",
+        "/icons/icon-maskable-192.png",
+        "/icons/icon-maskable-512.png",
+        "/icons/icon.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/chunk-4LRGQ23M.js": "ec64063163523f37e9cd5f6f0e2d641da99a992d",
+    "/chunk-ASOXF6YN.js": "4c8942271269b054c07287e3a3bdccdc82a7fa09",
+    "/chunk-DOAUBBZL.js": "d920875862d473b5d8b1a71c3e436778cd893274",
+    "/chunk-EPQV62DP.js": "d535181536a5fa7b82218b74411a9c745af96690",
+    "/chunk-EZ4IHYOX.js": "23ff8306d18f95282b158c33992c27efb9f65b32",
+    "/chunk-OCGM5B7Y.js": "86ebe893252d591153fd41c0d3aaf15f935c12a0",
+    "/chunk-RFSFFDG5.js": "e305e0821e1c3c677fe01d981fc662eb0246e75c",
+    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/icons/apple-touch-icon.png": "4bb468b682f2eb4752de7c6a4a2abeb95769ba7a",
+    "/icons/icon-192.png": "7011d18a46981f8bc142efa9e012d6a6f68abaff",
+    "/icons/icon-512.png": "0f1417fe73372d59ef1909a7075bd5c9a7cb38d8",
+    "/icons/icon-maskable-192.png": "a08c3e6b29dbb71739a6513b86bdcde9a0d52b8c",
+    "/icons/icon-maskable-512.png": "88a774b2ef343f84aac3ecc63dd5ba864d162256",
+    "/icons/icon.svg": "647edc04da71e2ae8df9d6a007856e522284c405",
+    "/index.html": "4b082fc03bf35a71b548ab0a07a4ca9c2156161f",
+    "/main-P6BNTV7C.js": "0e292caf18a4f6f3e1b9edd6cc0e6ab4198f0ffe",
+    "/manifest.webmanifest": "3a45f3d5739a88bb05f56b9aaa9b80e9314192fe",
+    "/styles-2GTMOIPS.css": "b4a837eb5ace5756a583ecb19b48e0d99d5ddd69"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
