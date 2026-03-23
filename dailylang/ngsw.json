@@ -1,0 +1,75 @@
+{
+  "configVersion": 1,
+  "timestamp": 1774252003655,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/chunk-2K5PEQ2A.js",
+        "/chunk-6MD77LVL.js",
+        "/chunk-BGFR6G6E.js",
+        "/chunk-OOLFGUPT.js",
+        "/chunk-QDK2GNZ4.js",
+        "/chunk-UUTQQLSI.js",
+        "/chunk-VPQHHS2I.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main-GUIDTTZH.js",
+        "/styles-IQUR4Q3U.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/sql-wasm.wasm"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/sql-wasm.wasm": "56012340720f007da251166f42e74d3a7f5092af",
+    "/chunk-2K5PEQ2A.js": "127b5d277596477866e36f9a5f7944cf0e4dde07",
+    "/chunk-6MD77LVL.js": "ece42ec628290d139f3b6a2efc0ff8c78c6b8406",
+    "/chunk-BGFR6G6E.js": "859f1b05a22505707d364ae707eb909961d33eb8",
+    "/chunk-OOLFGUPT.js": "a85ce5dd82ef4c8246ed38f71223a996606312c9",
+    "/chunk-QDK2GNZ4.js": "2e735245df580ac63c0bcddf57b4123551752e86",
+    "/chunk-UUTQQLSI.js": "e71ef5ab7b3bbf5f23feadc3013c4edd4e86cd41",
+    "/chunk-VPQHHS2I.js": "1b9680043071d0692f971242ee27ba060f2b239e",
+    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/index.html": "bcf786e82026a6eda2f23bc40912fcdd619d3e04",
+    "/main-GUIDTTZH.js": "fa3a5234cc1cae3385e9af860b05cf18a712f386",
+    "/styles-IQUR4Q3U.css": "46991f0d30d558c02970cd02031b343a8059e46b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
