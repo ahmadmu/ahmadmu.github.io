@@ -2,6 +2,7 @@
   "name": "DailyLang",
   "short_name": "DailyLang",
   "description": "Daily Japanese language learning with AI",
+  "scope": "./",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#F2F2F0",
