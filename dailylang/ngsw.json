@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774459959523,
+  "timestamp": 1774553231191,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,20 +11,24 @@
         "ignoreVary": true
       },
       "urls": [
-        "/chunk-42MRBTMO.js",
-        "/chunk-4CSG2GL4.js",
+        "/chunk-3DNUK43I.js",
+        "/chunk-47NVWSOO.js",
+        "/chunk-7PI35DZA.js",
         "/chunk-BGFR6G6E.js",
-        "/chunk-IFTCU73I.js",
-        "/chunk-K7Z3SHFG.js",
-        "/chunk-PI2A2XE6.js",
-        "/chunk-QXXQYKKV.js",
+        "/chunk-BYJKK4TJ.js",
+        "/chunk-CABTR6QM.js",
+        "/chunk-KT7NV3TU.js",
+        "/chunk-L2EUDEEI.js",
+        "/chunk-MREBI34Z.js",
+        "/chunk-PA2RRJHH.js",
+        "/chunk-RW7RXA4E.js",
         "/chunk-UUTQQLSI.js",
-        "/chunk-VN3DYKKA.js",
         "/chunk-VPQHHS2I.js",
         "/favicon.ico",
         "/index.html",
-        "/main-4ZV6VWQ5.js",
-        "/styles-I5QIM4DU.css"
+        "/main-IKZY2LYM.js",
+        "/styles-4N5NLEKW.css",
+        "/worker-7GZC7NYU.js"
       ],
       "patterns": []
     },
@@ -36,6 +40,9 @@
         "ignoreVary": true
       },
       "urls": [
+        "/assets/JMdict_english_with_examples.zip",
+        "/assets/JMnedict.zip",
+        "/assets/KANJIDIC_english.zip",
         "/assets/sql-wasm.wasm"
       ],
       "patterns": []
@@ -43,21 +50,28 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/assets/JMdict_english_with_examples.zip": "7e9ee3dd275c8a6f0e2bb33b59c7da6d5f3e6ae9",
+    "/assets/JMnedict.zip": "b605d2ab0252ad588ff20941ba3611d2a28dedef",
+    "/assets/KANJIDIC_english.zip": "c3fb15f8d00cfdaa0351c3dc0726dd85e0a53022",
     "/assets/sql-wasm.wasm": "56012340720f007da251166f42e74d3a7f5092af",
-    "/chunk-42MRBTMO.js": "0ee4923e7e454ab2b307e53332cdf82b556a523c",
-    "/chunk-4CSG2GL4.js": "ed03a475746175b077dba66544ec1ab8ebca21e7",
+    "/chunk-3DNUK43I.js": "87228332446140c530ce79feda99f06b8d1834b7",
+    "/chunk-47NVWSOO.js": "97c3201ec37843705701e1a10af22f44b1826dde",
+    "/chunk-7PI35DZA.js": "05c78331a64c72228dd48a0ab3d74afe289753fe",
     "/chunk-BGFR6G6E.js": "859f1b05a22505707d364ae707eb909961d33eb8",
-    "/chunk-IFTCU73I.js": "cd4cb7589ba330a2a75b6691432567de50e7d37c",
-    "/chunk-K7Z3SHFG.js": "46d223500bcf6e18c6831e2ebe4ae693b8785507",
-    "/chunk-PI2A2XE6.js": "a90c44b7dc79fa9f17fe8894555e77fb406d9411",
-    "/chunk-QXXQYKKV.js": "a865bdc7e8529b9519bf4080ab68db173473f818",
+    "/chunk-BYJKK4TJ.js": "4495ea6a848dae1d176b281f48c7656e79187f4f",
+    "/chunk-CABTR6QM.js": "c70190731b8ef09d44ada97a5acaa8558bf44319",
+    "/chunk-KT7NV3TU.js": "7e29be5998038951c6386aed6bcf1f2872715809",
+    "/chunk-L2EUDEEI.js": "7743eb1b67b4e3c753ed1d3dfee1614207ff148d",
+    "/chunk-MREBI34Z.js": "e0ae692a6da02b7262a12a56be38ff0bcc020fab",
+    "/chunk-PA2RRJHH.js": "859d4faa6237090c09e4d405ea69035401ecbf79",
+    "/chunk-RW7RXA4E.js": "13adc31e147528ad204bcb9232a52ba6f94aa9eb",
     "/chunk-UUTQQLSI.js": "e71ef5ab7b3bbf5f23feadc3013c4edd4e86cd41",
-    "/chunk-VN3DYKKA.js": "91bd56fde522a9cea16b915dad68d341cee215a4",
     "/chunk-VPQHHS2I.js": "1b9680043071d0692f971242ee27ba060f2b239e",
     "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/index.html": "c1fdbccf95f71c90c80a8887f4d55056ddd2abbb",
-    "/main-4ZV6VWQ5.js": "4f83c980a3f70076d38a75eb84a072014009b305",
-    "/styles-I5QIM4DU.css": "55d00d9d7b6dbb7682b4db67b0c4623b4187441c"
+    "/index.html": "eb1d4eda8ab1e9bfbe0a8e4bf56624c16ecdf3e3",
+    "/main-IKZY2LYM.js": "f7875da14aef93458419d61da723107c923989f1",
+    "/styles-4N5NLEKW.css": "95d08c0e54a2b353205cd05d33627443f79087ae",
+    "/worker-7GZC7NYU.js": "f1082c29cbe23ae80970a16363f8932a72a7882e"
   },
   "navigationUrls": [
     {
