@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774651458678,
+  "timestamp": 1774687352801,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,15 +11,15 @@
         "ignoreVary": true
       },
       "urls": [
+        "/chunk-3Y2C6ETC.js",
+        "/chunk-5HXL3HAX.js",
         "/chunk-BGFR6G6E.js",
         "/chunk-GRY25V56.js",
-        "/chunk-HI3JEDN5.js",
+        "/chunk-GTUQNOZK.js",
         "/chunk-IO3R7JZZ.js",
         "/chunk-JNX5ZOEO.js",
         "/chunk-LHEV4LFM.js",
-        "/chunk-LZ2BOTTS.js",
         "/chunk-QLGDRL6P.js",
-        "/chunk-RP5RIAO4.js",
         "/chunk-TKJMPBSO.js",
         "/chunk-UUTQQLSI.js",
         "/chunk-VPQHHS2I.js",
@@ -30,8 +30,8 @@
         "/chunk-ZR4HVKKW.js",
         "/favicon.ico",
         "/index.html",
-        "/main-WQQEQ2JA.js",
-        "/styles-UZIYBYRU.css",
+        "/main-SJQQVH54.js",
+        "/styles-TTIFELN3.css",
         "/worker-7GZC7NYU.js"
       ],
       "patterns": []
@@ -58,15 +58,15 @@
     "/assets/JMnedict.zip": "b605d2ab0252ad588ff20941ba3611d2a28dedef",
     "/assets/KANJIDIC_english.zip": "c3fb15f8d00cfdaa0351c3dc0726dd85e0a53022",
     "/assets/sql-wasm.wasm": "56012340720f007da251166f42e74d3a7f5092af",
+    "/chunk-3Y2C6ETC.js": "10d7278aca9d3c11b1067702aeeca04c98e80608",
+    "/chunk-5HXL3HAX.js": "2642b9c394e6f13df5d925056a3e8bfe57aab270",
     "/chunk-BGFR6G6E.js": "859f1b05a22505707d364ae707eb909961d33eb8",
     "/chunk-GRY25V56.js": "9c02418756a0fb771b4f7a916270e93dfad5d24c",
-    "/chunk-HI3JEDN5.js": "9976ae97d92cb935cb6a81ff19726282f0ab5aa6",
+    "/chunk-GTUQNOZK.js": "55e99ae7dfb3bcc20485251363bf31f2d2a370ff",
     "/chunk-IO3R7JZZ.js": "de437ee2df63b95fbb22b71272903fdb85f8285c",
     "/chunk-JNX5ZOEO.js": "5210065890e2af79dda066c5002e340581b8e8e4",
     "/chunk-LHEV4LFM.js": "c30f0827d3810f98d6ebf9d7a7205c1aebee3c00",
-    "/chunk-LZ2BOTTS.js": "9a4af96dcd44651ad930edfa8a68765c0de7a294",
     "/chunk-QLGDRL6P.js": "8fa24c54b89ab5c464bd710aac7993c8ffd1840b",
-    "/chunk-RP5RIAO4.js": "341eeb6f11e0cc9c5f6b21bd1f81410aa73893b1",
     "/chunk-TKJMPBSO.js": "c305915e52fb094536b49c7f6452b25fd2c177e1",
     "/chunk-UUTQQLSI.js": "e71ef5ab7b3bbf5f23feadc3013c4edd4e86cd41",
     "/chunk-VPQHHS2I.js": "1b9680043071d0692f971242ee27ba060f2b239e",
@@ -76,9 +76,9 @@
     "/chunk-ZKPFYTQF.js": "58e4d09c5c742e1397aa32e1da010b85a4fa99d2",
     "/chunk-ZR4HVKKW.js": "deffa8b2e00d16fecbe6836d7bb8352dd27fdb4f",
     "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/index.html": "38d8cccaf6e144239ef67ba9ed2d1601afa836b8",
-    "/main-WQQEQ2JA.js": "9f27f6aa8b3936a913235f7f44fc94ecceeafcae",
-    "/styles-UZIYBYRU.css": "ca78cd853bbfbc75da3cdcfb266d661497cfba7f",
+    "/index.html": "951ef7a8ddcedb31611f3a8bfd08138a480ff6cc",
+    "/main-SJQQVH54.js": "6ee69492ff255ad0993dd581e9048ccf1c5dea6c",
+    "/styles-TTIFELN3.css": "fa70ee6fad461aef4a760ea17ca2bf9ecf37bafa",
     "/worker-7GZC7NYU.js": "f1082c29cbe23ae80970a16363f8932a72a7882e"
   },
   "navigationUrls": [
