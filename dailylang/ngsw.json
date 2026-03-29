@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774818797987,
+  "timestamp": 1774818944075,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -12,8 +12,8 @@
       },
       "urls": [
         "/chunk-4CGD3YWC.js",
-        "/chunk-5XXMY436.js",
         "/chunk-AMBYPBF5.js",
+        "/chunk-BQ4LGQB5.js",
         "/chunk-FHMIJMJQ.js",
         "/chunk-H5HDISCX.js",
         "/chunk-HHOWU53Y.js",
@@ -33,7 +33,7 @@
         "/chunk-VWDKV3O6.js",
         "/favicon.ico",
         "/index.html",
-        "/main-4ONSBINZ.js",
+        "/main-E4BX6X54.js",
         "/styles-GMKD6XDJ.css",
         "/worker-7GZC7NYU.js"
       ],
@@ -62,8 +62,8 @@
     "/assets/KANJIDIC_english.zip": "c3fb15f8d00cfdaa0351c3dc0726dd85e0a53022",
     "/assets/sql-wasm.wasm": "56012340720f007da251166f42e74d3a7f5092af",
     "/chunk-4CGD3YWC.js": "57f0a1ed3c2d913c9237ccbb19634aacf94111e4",
-    "/chunk-5XXMY436.js": "ea51899d7600a9341a25abc2e8fb9deaf539dabc",
     "/chunk-AMBYPBF5.js": "b2deadd58ec4c2238d3c254ffe3476c17d2c0b8e",
+    "/chunk-BQ4LGQB5.js": "c33955e10dbac0bbcba3a198e231ffcd6a44af2e",
     "/chunk-FHMIJMJQ.js": "9444f672178845d34ea58fdfbff3c10231d5f1b2",
     "/chunk-H5HDISCX.js": "27c1e4c4f8da06ab58de680612c2efc22e1b0e21",
     "/chunk-HHOWU53Y.js": "561dec635c219dab67b20641d5f1bacdc2c48da2",
@@ -82,8 +82,8 @@
     "/chunk-VPQHHS2I.js": "1b9680043071d0692f971242ee27ba060f2b239e",
     "/chunk-VWDKV3O6.js": "1e41055afa3d538a4bf2a3f49c3f59b62b8eb26f",
     "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/index.html": "ce6f1b4250eb8a8ff77317907a03eed15edd36c1",
-    "/main-4ONSBINZ.js": "093c0eb60f312dbc9774a364cd36c888a25ba5b6",
+    "/index.html": "da2b47de5ea4a78e9caf7c2a65e85269689d2a4c",
+    "/main-E4BX6X54.js": "80d517a59c908f5c094b28230b8a54de0982e6c7",
     "/styles-GMKD6XDJ.css": "6eda54f1ffc04f04955627e7164c8e61a453bf6d",
     "/worker-7GZC7NYU.js": "f1082c29cbe23ae80970a16363f8932a72a7882e"
   },
