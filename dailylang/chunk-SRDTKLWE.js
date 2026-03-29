@@ -1,0 +1,1 @@
+function o(){if(typeof crypto.randomUUID=="function")return crypto.randomUUID();let n=crypto.getRandomValues(new Uint8Array(16));return n[6]=n[6]&15|64,n[8]=n[8]&63|128,[...n].map((t,r)=>([4,6,8,10].includes(r)?"-":"")+t.toString(16).padStart(2,"0")).join("")}export{o as a};
