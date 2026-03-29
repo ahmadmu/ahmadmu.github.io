@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1774803928003,
+  "timestamp": 1774813017181,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -11,9 +11,10 @@
         "ignoreVary": true
       },
       "urls": [
-        "/chunk-45IDSHGU.js",
         "/chunk-4DJYAPA5.js",
-        "/chunk-GGEVOFJM.js",
+        "/chunk-4FFORU5N.js",
+        "/chunk-5JLMUDAW.js",
+        "/chunk-C3VEV3DY.js",
         "/chunk-GILINOQZ.js",
         "/chunk-H5HDISCX.js",
         "/chunk-HHOWU53Y.js",
@@ -21,7 +22,6 @@
         "/chunk-KHXZ7ZKJ.js",
         "/chunk-KXN2KMHC.js",
         "/chunk-LZI54TKN.js",
-        "/chunk-NFYEVKCK.js",
         "/chunk-PLJQT7FX.js",
         "/chunk-QYHPZU7V.js",
         "/chunk-RPCBXEUO.js",
@@ -33,7 +33,7 @@
         "/chunk-ZJYIUUVG.js",
         "/favicon.ico",
         "/index.html",
-        "/main-XTSJ7ZO5.js",
+        "/main-ZAPWOP4D.js",
         "/styles-LAZF37EV.css",
         "/worker-7GZC7NYU.js"
       ],
@@ -61,9 +61,10 @@
     "/assets/JMnedict.zip": "b605d2ab0252ad588ff20941ba3611d2a28dedef",
     "/assets/KANJIDIC_english.zip": "c3fb15f8d00cfdaa0351c3dc0726dd85e0a53022",
     "/assets/sql-wasm.wasm": "56012340720f007da251166f42e74d3a7f5092af",
-    "/chunk-45IDSHGU.js": "0947bd3c7520d6238ec114d177b5f349c34125b1",
     "/chunk-4DJYAPA5.js": "05b73c949777551a3c786e1b69662ac9f8fe026e",
-    "/chunk-GGEVOFJM.js": "5407923f2fc442f9a618eaa337c1fc0e1f4c9411",
+    "/chunk-4FFORU5N.js": "a89343dad1c83adaea7dad8fe56b99ae6a244e1b",
+    "/chunk-5JLMUDAW.js": "a95cb31e5bcde980cd40ab8ec97db30a9219c6d6",
+    "/chunk-C3VEV3DY.js": "6c7ddd5d89d7f97ea439b8d7e6f4054cf1947d8a",
     "/chunk-GILINOQZ.js": "c986eecdd18ad11af80c6227a31292f0b0dc049c",
     "/chunk-H5HDISCX.js": "27c1e4c4f8da06ab58de680612c2efc22e1b0e21",
     "/chunk-HHOWU53Y.js": "561dec635c219dab67b20641d5f1bacdc2c48da2",
@@ -71,7 +72,6 @@
     "/chunk-KHXZ7ZKJ.js": "cd7ddc9c232fe1f636f6aede5af0cde91d43d0ec",
     "/chunk-KXN2KMHC.js": "ac6a88a940db31e2b7c5583fe3f80233d5084fb9",
     "/chunk-LZI54TKN.js": "7be3504fdd26946105cdbe4f8fb3a5579951938c",
-    "/chunk-NFYEVKCK.js": "840380bf0743cdee0c4b1161424e8bdc453eba44",
     "/chunk-PLJQT7FX.js": "42ed705b806d5d89300259f71d2ce277079eddb5",
     "/chunk-QYHPZU7V.js": "cb0375465b251230a2fe9aa7abd028ef73d43ba9",
     "/chunk-RPCBXEUO.js": "eb17ce9328e013e09442ad3eacf16a1055ebbb5f",
@@ -82,8 +82,8 @@
     "/chunk-XHBMH3NQ.js": "d2f47354675f91da0bf8922bce6cd8650fa3deeb",
     "/chunk-ZJYIUUVG.js": "cb6df5f1214a4d08e0571b88b6b646c302a094de",
     "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/index.html": "2b0562791658527f89ecb7f6346521e48a8ac625",
-    "/main-XTSJ7ZO5.js": "c7260902fe8b1538ac186a5ec2bbcfa4886b97c7",
+    "/index.html": "2498aafce5c953b841a645e7f5bea18d5eb1fb1b",
+    "/main-ZAPWOP4D.js": "5bdd3e659d0e3541897f93bd3857cd0297b3e133",
     "/styles-LAZF37EV.css": "fd1918a0a42bc71d8ae6426f5b315fd79a9bb2fb",
     "/worker-7GZC7NYU.js": "f1082c29cbe23ae80970a16363f8932a72a7882e"
   },
