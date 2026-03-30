@@ -1,308 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+        <title>Ahmad Moudallal</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Moudallal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+        <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-    <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+            :root {
+                --primary: rgb(72, 72, 138);
+                --secondary: rgb(232, 200, 112);
+                --text: rgb(32, 32, 72);
+                --bg: rgb(245, 245, 252);
+                --muted: rgba(32, 32, 72, 0.8);
+                --border: rgba(72, 72, 138, 0.2);
+                --hover-bg: rgba(72, 72, 138, 0.06);
+            }
 
-        :root {
-            --primary: rgb(72, 72, 138);
-            --secondary: rgb(232, 200, 112);
-            --text: rgb(32, 32, 72);
-            --bg: rgb(245, 245, 252);
-            --muted: rgba(32, 32, 72, 0.8);
-            --border: rgba(72, 72, 138, 0.2);
-            --hover-bg: rgba(72, 72, 138, 0.06);
-        }
+            body {
+                font-family: 'Open Sans', sans-serif;
+                background-color: var(--bg);
+                color: var(--text);
+                min-height: 100vh;
+                padding: 3rem 1.5rem;
+            }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            padding: 3rem 1.5rem;
-        }
+            main {
+                max-width: 640px;
+                margin: 0 auto;
+            }
 
-        main {
-            max-width: 640px;
-            margin: 0 auto;
-        }
+            header {
+                margin-bottom: 3rem;
+                animation: fadeDown 0.5s ease both;
+            }
 
-        header {
-            margin-bottom: 3rem;
-            animation: fadeDown 0.5s ease both;
-        }
+            h1 {
+                font-size: 2rem;
+                font-weight: 300;
+            }
 
-        h1 {
-            font-size: 2rem;
-            font-weight: 300;
-        }
+            header p {
+                color: var(--muted);
+                font-size: 1rem;
+            }
 
-        header p {
-            color: var(--muted);
-            font-size: 1rem;
-        }
+            h2 {
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                color: var(--muted);
+                margin-bottom: 1rem;
+            }
 
-        h2 {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--muted);
-            margin-bottom: 1rem;
-        }
+            .project-list {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.25rem;
+            }
 
-        .project-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
+            .project-list li {
+                animation: fadeUp 0.4s ease both;
+            }
 
-        .project-list li {
-            animation: fadeUp 0.4s ease both;
-        }
+            .project-list li:nth-child(1) { animation-delay: 0.05s; }
+            .project-list li:nth-child(2) { animation-delay: 0.10s; }
+            .project-list li:nth-child(3) { animation-delay: 0.15s; }
+            .project-list li:nth-child(4) { animation-delay: 0.20s; }
+            .project-list li:nth-child(5) { animation-delay: 0.25s; }
+            .project-list li:nth-child(6) { animation-delay: 0.30s; }
+            .project-list li:nth-child(7) { animation-delay: 0.35s; }
+            .project-list li:nth-child(8) { animation-delay: 0.40s; }
 
-        .project-list li:nth-child(1) { animation-delay: 0.05s; }
-        .project-list li:nth-child(2) { animation-delay: 0.10s; }
-        .project-list li:nth-child(3) { animation-delay: 0.15s; }
-        .project-list li:nth-child(4) { animation-delay: 0.20s; }
-        .project-list li:nth-child(5) { animation-delay: 0.25s; }
-        .project-list li:nth-child(6) { animation-delay: 0.30s; }
-        .project-list li:nth-child(7) { animation-delay: 0.35s; }
-        .project-list li:nth-child(8) { animation-delay: 0.40s; }
-
-        .project-link {
-            display: flex;
-            align-items: center;
-            gap: .5rem;
-            padding: 0.5rem 0.75rem;
-            border-radius: 4px;
-            text-decoration: none;
-            color: var(--text);
-            transition: color 0.2s ease, padding-left 0.2s ease, background 0.2s ease;
-        }
-
-        .project-text {
-            display: flex;
-            flex-direction: column;
-            gap: 0.15rem;
-            flex: 1;
-        }
-
-        .project-link:hover,
-        .project-link:focus-visible {
-            color: var(--primary);
-            background: var(--hover-bg);
-            padding-left: 0.75rem;
-        }
-
-        .project-link:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px;
-            border-radius: 2px;
-        }
-
-        .project-name {
-            font-size: 1.1rem;
-            font-weight: 400;
-        }
-
-        .project-desc {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .project-meta {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            white-space: nowrap;
-        }
-
-        .project-year {
-            font-size: 0.8rem;
-            color: var(--muted);
-        }
-
-        @media (max-width: 480px) {
             .project-link {
-                flex-wrap: wrap;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                padding: 0.5rem 0.75rem;
+                border-radius: 4px;
+                text-decoration: none;
+                color: var(--text);
+                transition: color 0.2s ease, padding-left 0.2s ease, background 0.2s ease;
             }
 
             .project-text {
-                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+                flex: 1;
+            }
+
+            .project-link:hover,
+            .project-link:focus-visible {
+                color: var(--primary);
+                background: var(--hover-bg);
+                padding-left: 0.75rem;
+            }
+
+            .project-link:focus-visible {
+                outline: 2px solid var(--primary);
+                outline-offset: 2px;
+                border-radius: 2px;
+            }
+
+            .project-name {
+                font-size: 1.1rem;
+                font-weight: 400;
+            }
+
+            .project-desc {
+                font-size: 0.85rem;
+                color: var(--muted);
             }
 
             .project-meta {
-                width: 100%;
-                justify-content: flex-end;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                white-space: nowrap;
             }
-        }
 
-        .tag {
-            font-size: 0.7rem;
-            background: var(--secondary);
-            color: var(--text);
-            padding: 0.15rem 0.4rem;
-            border-radius: 2px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-        }
-
-        footer {
-            margin-top: 3rem;
-            font-size: 0.85rem;
-            color: var(--muted);
-            animation: fadeUp 0.4s 0.5s ease both;
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: var(--text);
-        }
-
-        @keyframes fadeDown {
-            from { opacity: 0; transform: translateY(-12px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(10px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation: none !important;
-                transition: none !important;
+            .project-year {
+                font-size: 0.8rem;
+                color: var(--muted);
             }
-        }
-    </style>
-</head>
 
-<body>
-    <main>
-        <header>
-            <h1>Ahmad Moudallal</h1>
-            <p>Frontend / Fullstack Developer, UX Designer</p>
-        </header>
+            @media (max-width: 480px) {
+                .project-link {
+                    flex-wrap: wrap;
+                }
 
-        <nav aria-label="Projects">
-            <h2>Projects</h2>
-            <ul class="project-list">
-                <li>
-                    <a class="project-link" href="./bookcharts/" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">BookCharts</span>
-                            <span class="project-desc">Books tracking & visualization tool - Angular, Tailwind, ChartJS</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="tag">active</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="./dailylang/" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">DailyLang</span>
-                            <span class="project-desc">Language learning tool - Angular, Tailwind</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="tag">active</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="./jomobrief/" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">JomoBrief</span>
-                            <span class="project-desc">a brief daily news digest - Angular, Tailwind</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="project-year">2026</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="https://peopleindresden.de/" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">People in Dresden</span>
-                            <span class="project-desc">Frontend for the People in Dresden Facebook page - Vue.js, Tailwind</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="project-year">2022</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="./infovis/" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">Sprachsynthese</span>
-                            <span class="project-desc">Information visualization uni project - Vue.js, TypeScript, Bootstrap 4</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="project-year">2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="./lakebledslovenia.html" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">Lake Bled</span>
-                            <span class="project-desc">Travel page - CSS, jQuery, Materialize</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="project-year">2017</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="./shoppinglist/index.html" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">Shopping List</span>
-                            <span class="project-desc">Angular training project - Bootstrap 3</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="project-year">2017</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="project-link" href="./eventkalender2015/eventkalender.html" target="_blank" rel="noopener">
-                        <div class="project-text">
-                            <span class="project-name">Event Calendar</span>
-                            <span class="project-desc">First group project - vanilla HTML, CSS, JS</span>
-                        </div>
-                        <div class="project-meta">
-                            <span class="project-year">2014</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                .project-text {
+                    width: 100%;
+                }
 
-        <footer>
-            <p>Source code on <a href="https://github.com/ahmadmu" target="_blank" rel="noopener">GitHub</a></p>
-        </footer>
-    </main>
-</body>
+                .project-meta {
+                    width: 100%;
+                    justify-content: flex-end;
+                }
+            }
 
+            .tag {
+                font-size: 0.7rem;
+                background: var(--secondary);
+                color: var(--text);
+                padding: 0.15rem 0.4rem;
+                border-radius: 2px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                white-space: nowrap;
+            }
+
+            footer {
+                margin-top: 3rem;
+                font-size: 0.85rem;
+                color: var(--muted);
+                animation: fadeUp 0.4s 0.5s ease both;
+            }
+
+            footer a {
+                color: var(--primary);
+                text-decoration: underline;
+            }
+
+            footer a:hover {
+                color: var(--text);
+            }
+
+            @keyframes fadeDown {
+                from { opacity: 0; transform: translateY(-12px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes fadeUp {
+                from { opacity: 0; transform: translateY(10px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                *, *::before, *::after {
+                    animation: none !important;
+                    transition: none !important;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1>Ahmad Moudallal</h1>
+                <p>Frontend / Fullstack Developer, UX Designer</p>
+            </header>
+
+            <nav aria-label="Projects">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <a class="project-link" href="./bookcharts/" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">BookCharts</span>
+                                <span class="project-desc">Books tracking & visualization tool - Angular, Tailwind, ChartJS</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="tag">active</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="./dailylang/" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">DailyLang</span>
+                                <span class="project-desc">Language learning tool - Angular, Tailwind</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="tag">active</span>
+                                <span class="project-year">2026</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="./jomobrief/" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">JomoBrief</span>
+                                <span class="project-desc">A brief news digest - Angular, Tailwind</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-year">2026</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="https://peopleindresden.de/" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">People in Dresden</span>
+                                <span class="project-desc">Frontend for the People in Dresden Facebook page - Vue.js, Tailwind</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-year">2022</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="./infovis/" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">Sprachsynthese</span>
+                                <span class="project-desc">Information visualization uni project - Vue.js, TypeScript, Bootstrap 4</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-year">2019</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="./lakebledslovenia.html" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">Lake Bled</span>
+                                <span class="project-desc">Small training project - CSS, jQuery, Materialize</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-year">2017</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="./shoppinglist/index.html" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">Shopping List</span>
+                                <span class="project-desc">Angular training project - Bootstrap 3</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-year">2017</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-link" href="./eventkalender2015/eventkalender.html" target="_blank" rel="noopener">
+                            <div class="project-text">
+                                <span class="project-name">Event Calendar</span>
+                                <span class="project-desc">First group project - vanilla HTML, CSS, JS</span>
+                            </div>
+                            <div class="project-meta">
+                                <span class="project-year">2014</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer>
+                <p>Source code on <a href="https://github.com/ahmadmu" target="_blank" rel="noopener">GitHub</a></p>
+            </footer>
+        </main>
+    </body>
 </html>
