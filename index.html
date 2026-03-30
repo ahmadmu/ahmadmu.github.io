@@ -1,157 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-    <head>
-        <title>Ahmad's Showcase</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed|Indie+Flower" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        
-        <style>
-            /* body {
-                background-color: 
-            } */
-            .container{
-                font-family: 'Saira Semi Condensed', sans-serif;
-            }
-            h1 {
-                font-family: 'Indie Flower', cursive;
-            }
-            img {
-                border-radius: 2px;
-            }
-            p {
-                margin: 4px;
-                text-align: left;
-            }
-            #header {
-                padding: 16px;
-            }
-            .thumbnail {
-                padding: 0px;
-                height: 163px;
-                width: 360px;
-                margin-bottom: 12px;
-            }
-            a:hover {
-                text-decoration: none;
-            }
-            .date {
-                display: block;
-            }
-            .col-md-4 {
-                height: 300px;
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Moudallal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <body>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-        <div class="container text-center">
-            <div id="header">
-                <h1>Ahmad Moudallal</h1>
-                <h5>Web Developer</h5>
-                </div>
-             <div class="row">
-                <div class="col-md-4">
-                    <a href="./bookcharts/" target="_blank"><img class="img-responsive thumbnail" src="https://i.imgur.com/F613vPp.png" alt="bookcharts"></a>
-                    <p>
-                        <a href="./bookcharts/" target="_blank">
-                            BookCharts (in development)
-                        </a>
-                        - 
-                        <a href="https://github.com/ahmadmu/bookcharts" target="_blank">source code</a>
-                    </p>
-                    <p>
-                        A books visualization tool built with Angular 19, Tailwind and ChartJs, designed with UX methods.
-                    </p>
-                    <p class="date">Date Created: 2025</p>  
-                </div>
-                <div class="col-md-4">
-                    <a href="https://peopleindresden.de/" target="_blank">
-                        <img class="img-responsive thumbnail" src="https://i.imgur.com/M8HyQ9d.jpeg" alt="peopleindresden"></a>
-                        <p>
-                            <a href="https://peopleindresden.de/" target="_blank">
-                                People in Dresden
-                            </a>
-                        </p>
-                    <p>
-                        Frontend project for the facebook group People in Dresden, similar to Humans of New York, 
-                        built with Vuejs and Tailwindjs, done in HxCode    
-                    </p>
-                    <p class="date">Date Created: 2022-2023</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="./infovis/" target="_blank"><img class="img-responsive thumbnail" src="https://i.imgur.com/wcmowzZ.png" alt="infovis"></a>
-                    <p>
-                        <a href="./infovis/" target="_blank">
-                            Sprachsynthese
-                        </a>
-                        - 
-                        <a href="https://github.com/ahmadmu/infovis" target="_blank">source code</a>
-                    </p>
-                    <p>
-                        Information visualization uni project, built with Vuejs, Typescript and Bootstrap 4, designed with UX methods    
-                    </p>
-                    <p class="date">Date Created: April 2018 - January 2019</p>
-                </div>
-                <!-- <div class="col-md-4">
-                    <img class="img-responsive thumbnail" src="https://i.imgur.com/zJITnqv.jpg" alt="GRT">
-                    <p>GIRLSRIDETOO.DE - <span class="text-secondary">outdated</span></p>
-                    <p>
-                        Wordpress Theme Development, php, bootstrap 3.3.7
-                    </p>
-                </div> -->
-                <!-- <div class="col-md-4">
-                    <img class="img-responsive thumbnail" src="./computech/asciidoc/models/design/bootstrap-gui-img/index.jpg" alt="Computech">
-                    <p>Computech - <span class="text-secondary">offline</span></p>
-                    <p>Uni Group project w/ Spring-boot, thymeleaf, salespoint, scrum, ood, bootstrap 4 - 
-                    </p>
-                    <p class="date">Date Created: October 2017 - January 2018</p>
-                </div> -->
-                <div class="col-md-4">
-                    <a href="./lakebledslovenia.html" target="_blank"><img class="img-responsive thumbnail" src="http://i.imgur.com/g5t0pRn.jpg" alt="Lake Bled"></a>
-                    <a href="./lakebledslovenia.html" target="_blank">
-                        <p>Lake Bled</p>
+        :root {
+            --primary: rgb(72, 72, 138);
+            --secondary: rgb(232, 200, 112);
+            --text: rgb(32, 32, 72);
+            --bg: rgb(245, 245, 252);
+            --muted: rgba(32, 32, 72, 0.8);
+            --border: rgba(72, 72, 138, 0.2);
+            --hover-bg: rgba(72, 72, 138, 0.06);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+        }
+
+        main {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            animation: fadeDown 0.5s ease both;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        header p {
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .project-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .project-list li {
+            animation: fadeUp 0.4s ease both;
+        }
+
+        .project-list li:nth-child(1) { animation-delay: 0.05s; }
+        .project-list li:nth-child(2) { animation-delay: 0.10s; }
+        .project-list li:nth-child(3) { animation-delay: 0.15s; }
+        .project-list li:nth-child(4) { animation-delay: 0.20s; }
+        .project-list li:nth-child(5) { animation-delay: 0.25s; }
+        .project-list li:nth-child(6) { animation-delay: 0.30s; }
+        .project-list li:nth-child(7) { animation-delay: 0.35s; }
+        .project-list li:nth-child(8) { animation-delay: 0.40s; }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text);
+            transition: color 0.2s ease, padding-left 0.2s ease, background 0.2s ease;
+        }
+
+        .project-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+            flex: 1;
+        }
+
+        .project-link:hover,
+        .project-link:focus-visible {
+            color: var(--primary);
+            background: var(--hover-bg);
+            padding-left: 0.75rem;
+        }
+
+        .project-link:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+
+        .project-name {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+
+        .project-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .project-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .project-year {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 480px) {
+            .project-link {
+                flex-wrap: wrap;
+            }
+
+            .project-text {
+                width: 100%;
+            }
+
+            .project-meta {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            background: var(--secondary);
+            color: var(--text);
+            padding: 0.15rem 0.4rem;
+            border-radius: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+            animation: fadeUp 0.4s 0.5s ease both;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: var(--text);
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Ahmad Moudallal</h1>
+            <p>Frontend / Fullstack Developer, UX Designer</p>
+        </header>
+
+        <nav aria-label="Projects">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li>
+                    <a class="project-link" href="./bookcharts/" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">BookCharts</span>
+                            <span class="project-desc">Books tracking & visualization tool - Angular, Tailwind, ChartJS</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="tag">active</span>
+                            <span class="project-year">2026</span>
+                        </div>
                     </a>
-                    <p>css, jquery and materialize.css </p>
-                    <p class="date">Date Created: August 2017</p>
-                </div>
-                <div class="col-md-4">
-                    <a href="./shoppinglist/index.html" target="_blank"><img class="img-responsive thumbnail" src="http://i.imgur.com/RB5fmjD.png" alt="Event Calendar"></a>
-                    <a href="./shoppinglist/index.html" target="_blank">
-                        <p>Shopping list</p>
+                </li>
+                <li>
+                    <a class="project-link" href="./dailylang/" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">DailyLang</span>
+                            <span class="project-desc">Language learning tool - Angular, Tailwind</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="tag">active</span>
+                            <span class="project-year">2026</span>
+                        </div>
                     </a>
-                    <p>Angular training w/ bootstrap 3.3.7</p>
-                    <p class="date">Date Created: June 2017</p>
-                </div>
-                <!-- <div class="col-md-4">
-                    <img class="img-responsive thumbnail" src="http://i.imgur.com/Qw0xP0o.png" alt="YoCamp">
-                    <p>YoCamp - <span class="text-secondary">offline</span></p>
-                    <p>Node.js, Express and MongoDB backend training w/ bootstrap 3.3.7</p>
-                    <p class="date">Date Created: May 2017</p>
-                </div> -->
-                 <div class="col-md-4">
-                    <a href="./eventkalender2015/eventkalender.html" target="_blank"><img class="img-responsive thumbnail" src="http://i.imgur.com/Uq2tdV5.png" alt="Event Calendar"></a>
-                    <a href="./eventkalender2015/eventkalender.html" target="_blank"><p>Event Calender</p></a>
-                    <p>First (vanilla) html + css + js group project</p>
-                    <p class="date">Date Created: December 2014</p>
-                 </div>
-             </div>
-             <hr>
-            <p>Source code for the training projects here can be found on my <a href="https://github.com/ahmadmu/projects">github</a></p>
-            <p><a href="https://github.com/ahmadmu/ahmadmu.github.io/blob/master/index.php">PHP copy of this page</a></p>
-        </div>
+                </li>
+                <li>
+                    <a class="project-link" href="./jomobrief/" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">JomoBrief</span>
+                            <span class="project-desc">a brief daily news digest - Angular, Tailwind</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2026</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="project-link" href="https://peopleindresden.de/" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">People in Dresden</span>
+                            <span class="project-desc">Frontend for the People in Dresden Facebook page - Vue.js, Tailwind</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2022</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="project-link" href="./infovis/" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">Sprachsynthese</span>
+                            <span class="project-desc">Information visualization uni project - Vue.js, TypeScript, Bootstrap 4</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="project-link" href="./lakebledslovenia.html" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">Lake Bled</span>
+                            <span class="project-desc">Travel page - CSS, jQuery, Materialize</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2017</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="project-link" href="./shoppinglist/index.html" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">Shopping List</span>
+                            <span class="project-desc">Angular training project - Bootstrap 3</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2017</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="project-link" href="./eventkalender2015/eventkalender.html" target="_blank" rel="noopener">
+                        <div class="project-text">
+                            <span class="project-name">Event Calendar</span>
+                            <span class="project-desc">First group project - vanilla HTML, CSS, JS</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-year">2014</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-        <script>
-            $(document).ready(function () {
-                $('img').hover( function () {
-                    $(this).css('opacity', '0.8');
-                }, function() {
-                    $(this).css('opacity', '1');
-                })
+        <footer>
+            <p>Source code on <a href="https://github.com/ahmadmu" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+</body>
 
-            });
-        </script>
-    </body>
 </html>
