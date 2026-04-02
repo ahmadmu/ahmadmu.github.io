@@ -1,0 +1,1 @@
+import{G as o,r as a}from"./chunk-D7BH2A3K.js";var t=class e{hideNav=o(!1);static \u0275fac=function(n){return new(n||e)};static \u0275prov=a({token:e,factory:e.\u0275fac,providedIn:"root"})};export{t as a};
