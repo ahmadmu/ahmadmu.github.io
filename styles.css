@@ -1,0 +1,286 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary:    #5858A0;
+    --secondary:  #E8C870;
+    --text:       #202048;
+    --muted:      rgba(32, 32, 72, 0.5);
+    --card-bg:    rgba(217, 217, 217, 0.15);
+    --card-hover: rgba(217, 217, 217, 0.30);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    padding: 5rem 1.5rem;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    animation: fadeDown 0.5s ease both;
+}
+
+.social-links {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.social-links a {
+    display: inline-block;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    color: var(--primary);
+}
+
+.social-links svg {
+    width: 24px;
+    height: 24px;
+}
+
+h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: clamp(1.7rem, 5vw, 2.6rem);
+    font-weight: 300;
+    line-height: 1.25;
+    color: var(--text);
+}
+
+h1 strong {
+    font-weight: 700;
+}
+
+.tabset input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.tab-nav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0;
+    margin-bottom: 1.25rem;
+    animation: fadeDown 0.4s 0.1s ease both;
+}
+
+.tab-nav label {
+    font-size: 0.85rem;
+    font-family: 'Manrope', sans-serif;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0.3rem 0.75rem;
+    margin-right: 0.25rem;
+    border-radius: 20px;
+    background: transparent;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.tab-nav label:hover {
+    color: var(--text);
+}
+
+.tab-nav label:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.tab-panel {
+    display: block;
+}
+.tab-panel + .tab-panel {
+    display: none;
+}
+
+@supports selector(:has(*)) {
+    .tab-panel {
+        display: none;
+        transition: opacity 0.2s ease;
+    }
+
+    @starting-style {
+        .tab-panel { opacity: 0; }
+    }
+
+    .tabset:has(#radio-current:checked) #panel-current { display: block; }
+    .tabset:has(#radio-old:checked)     #panel-old     { display: block; }
+    .tabset:has(#radio-about:checked)   #panel-about   { display: block; }
+
+    .tabset:has(#radio-current:checked) label[for="radio-current"],
+    .tabset:has(#radio-old:checked)     label[for="radio-old"],
+    .tabset:has(#radio-about:checked)   label[for="radio-about"] {
+        color: var(--text);
+    }
+}
+
+.project-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.project-list li {
+    animation: fadeUp 0.4s ease both;
+}
+
+.project-list li:nth-child(1) { animation-delay: 0.05s; }
+.project-list li:nth-child(2) { animation-delay: 0.10s; }
+.project-list li:nth-child(3) { animation-delay: 0.15s; }
+.project-list li:nth-child(4) { animation-delay: 0.20s; }
+.project-list li:nth-child(5) { animation-delay: 0.25s; }
+.project-list li:nth-child(6) { animation-delay: 0.30s; }
+.project-list li:nth-child(7) { animation-delay: 0.35s; }
+
+.project-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    justify-content: space-between;
+    background: var(--card-bg);
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.2s ease, border-color 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+    background: var(--card-hover);
+    border: 1px solid var(--primary);
+}
+
+.project-card:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.project-name {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.2rem;
+}
+
+.project-desc {
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+#panel-old .year-badge {
+    background: var(--muted);
+    color: #fff;
+}
+
+.year-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    font-family: 'Manrope', sans-serif;
+    background: var(--secondary);
+    color: var(--text);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+.about-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.75;
+    animation: fadeUp 0.3s ease both;
+    text-align: justify;
+}
+
+.about-text a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.about-text a:hover {
+    color: var(--text);
+}
+
+.cycle-wrapper {
+    display: inline-grid;
+    color: var(--text);
+    overflow: hidden;
+}
+
+.cycle-phrase {
+    grid-area: 1 / 1;
+    opacity: 0;
+    animation: cycle 7.5s infinite both;
+}
+
+.cycle-phrase:nth-child(2) { animation-delay: 2.5s; }
+.cycle-phrase:nth-child(3) { animation-delay: 5s; }
+
+@keyframes cycle {
+    0%    { opacity: 0; transform: translateY(60%); }
+    8%    { opacity: 1; transform: translateY(0); }
+    25%   { opacity: 1; transform: translateY(0); }
+    33%   { opacity: 0; transform: translateY(-60%); }
+    100%  { opacity: 0; transform: translateY(60%); }
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+    .cycle-phrase:first-child { opacity: 1; }
+}

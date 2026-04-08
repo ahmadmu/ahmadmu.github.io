@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  <text x="16" y="23" text-anchor="middle" font-family="Epilogue, sans-serif"
+        font-weight="700" font-size="15" fill="#5858A0">AM</text>
+</svg>
