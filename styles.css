@@ -227,6 +227,7 @@ h1 strong {
     line-height: 1.75;
     animation: fadeUp 0.3s ease both;
     text-align: justify;
+    max-width: 600px;
 }
 
 .about-text a {
