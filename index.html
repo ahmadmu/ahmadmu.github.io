@@ -2,213 +2,265 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="theme-color" content="#ffffff">
         <title>Ahmad Moudallal</title>
-        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="icon" type="image/svg+xml" href="favicon.svg">
         <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <main>
-            <header>
-                <h1>Hello, I'm <strong>Ahmad</strong>,
-                <span class="social-links" aria-label="Social links">
-                    <a href="https://github.com/ahmadmu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-                    </a>
-                    <a href="https://linkedin.com/in/amouda" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                </span>
-                <br>I enjoy <span class="cycle-wrapper"><span class="cycle-phrase">building software</span><span class="cycle-phrase">learning languages</span><span class="cycle-phrase">reading books</span></span></h1>
-            </header>
-
-            <div class="tabset">
-                <input type="radio" name="tab" id="radio-current" checked>
-                <input type="radio" name="tab" id="radio-old">
-                <input type="radio" name="tab" id="radio-about">
-
-                <nav class="tab-nav" role="tablist" aria-label="Project sections">
-                    <label id="tab-current" for="radio-current" role="tab" aria-controls="panel-current" aria-selected="true"  tabindex="0">currently building</label>
-                    <label id="tab-old"     for="radio-old"     role="tab" aria-controls="panel-old"     aria-selected="false" tabindex="-1">old (training) projects</label>
-                    <label id="tab-about"   for="radio-about"   role="tab" aria-controls="panel-about"   aria-selected="false" tabindex="-1">about me</label>
-                    <div class="tab-indicator" aria-hidden="true"></div>
-                </nav>
-
-                <div id="panel-current" class="tab-panel" role="tabpanel" aria-labelledby="tab-current">
-                    <ul class="project-list">
-                        <li>
-                            <a class="project-card" href="https://bookcharts.amouda.me/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">BookCharts</span>
-                                    <span class="project-desc">AI-powered books tracking and visualization tool, built with Angular, Tailwind and Claude</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2026</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="https://daylang.amouda.me/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Daylang</span>
-                                    <span class="project-desc">AI-powered language learning tool, built with Angular, Tailwind and Claude</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2026</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="https://moodapy.amouda.me/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Moodapy</span>
-                                    <span class="project-desc">Mood and habit tracker, built with Angular, Tailwind and Claude.</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2026</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="https://colorcombinations.amouda.me/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Dombo</span>
-                                    <span class="project-desc">Sanzo Wada's Dictionary of Color Combinations: 348 palettes, searchable by color, rendered as generative plates</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2026</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="https://journal.amouda.me/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Journal</span>
-                                    <span class="project-desc">Private, encrypted Markdown journal that lives in the browser, built with SvelteKit and CodeMirror</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2026</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div id="panel-old" class="tab-panel" role="tabpanel" aria-labelledby="tab-old">
-                    <ul class="project-list">
-                        <li>
-                            <a class="project-card" href="./jomobrief/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">JomoBrief</span>
-                                    <span class="project-desc">AI-powered brief news digest, built with Angular, Tailwind and Claude</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2026</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="https://peopleindresden.de/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">People in Dresden</span>
-                                    <span class="project-desc">a frontend for the People in Dresden Facebook page, built with Vue.js and Tailwind</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2022</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="./infovis/" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Sprachsynthese</span>
-                                    <span class="project-desc">an information visualization uni project, built with Vue.js, TypeScript and Bootstrap</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2019</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="./lakebledslovenia.html" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Lake Bled</span>
-                                    <span class="project-desc">a small training project built with CSS, jQuery and Materialize</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2017</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="./shoppinglist/index.html" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Shopping List</span>
-                                    <span class="project-desc">an Angular training project with Bootstrap</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2017</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="project-card" href="./eventkalender2015/eventkalender.html" target="_blank" rel="noopener noreferrer">
-                                <div class="project-text">
-                                    <span class="project-name">Event Calendar</span>
-                                    <span class="project-desc">a first group project built with vanilla HTML, CSS and JavaScript</span>
-                                </div>
-                                <div class="project-meta">
-                                    <span class="year-badge">2014</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div id="panel-about" class="tab-panel" role="tabpanel" aria-labelledby="tab-about">
-                    <p class="about-text">
-                        I'm a software developer who likes building things that are performant, secure, look good, and feel good to use.
-                        <br>I have a degree in Media Computer Science with focus on human computer interaction, and very curious
-                        on how technology affects us and our perception, and enjoy reading books about those topics.
-                        <br>Since 2017 developing professional web applications.
-                        <br>Currently building and maintaining medical software at <a href="https://spree.de/" target="_blank">tech@spree GmbH</a>.
-                    </p>
-                </div>
+        <header class="site-header">
+            <div class="identity">
+                <h1 class="name">Ahmad Moudallal</h1>
+                <p class="tagline">
+                    <span>Full-stack developer</span>
+                    <span>Bookworm</span>
+                    <span>Polyglot</span>
+                </p>
             </div>
+            <nav class="social-links" aria-label="Social links">
+                <a class="icon-link" href="https://github.com/ahmadmu" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                </a>
+                <a class="icon-link" href="https://linkedin.com/in/amouda" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="tab-list" role="tablist" aria-label="Sections">
+                <button class="tab" role="tab" id="tab-projects" aria-controls="panel-projects" aria-selected="true">projects</button>
+                <button class="tab" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="false" tabindex="-1">about me</button>
+            </div>
+
+            <section id="panel-projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
+                <div class="filter-bar" role="group" aria-label="Filter projects by tag">
+                    <!-- Filled by the script from the tags on the project rows -->
+                </div>
+                <p class="filter-status" aria-live="polite">
+                    <span class="filter-count"></span>
+                    <button class="text-button soft clear-filters" type="button" hidden>clear filters</button>
+                </p>
+
+                <ul class="project-list">
+                    <li class="project" data-tags="building ai-powered ai-assisted full-stack">
+                        <a class="project-link" href="https://bookcharts.amouda.me/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">BookCharts</span>
+                            <time class="project-year" datetime="2026">2026</time>
+                            <span class="project-desc">Book tracking and visualization tool, built with Angular & Tailwind</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="building ai-powered ai-assisted">
+                        <a class="project-link" href="https://dailang.amouda.me/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Dailang</span>
+                            <time class="project-year" datetime="2026">2026</time>
+                            <span class="project-desc">Language learning tool, built with Angular & Tailwind</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="building ai-assisted static">
+                        <a class="project-link" href="https://moodapy.amouda.me/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Moodapy</span>
+                            <time class="project-year" datetime="2026">2026</time>
+                            <span class="project-desc">Mood and habit tracker, built with Angular & Tailwind</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="building ai-assisted static">
+                        <a class="project-link" href="https://colorcombinations.amouda.me/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Color Combinations</span>
+                            <time class="project-year" datetime="2026">2026</time>
+                            <span class="project-desc">A color palette selector based on Sanzo Wada's Dictionary of Color Combinations</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="building ai-assisted static">
+                        <a class="project-link" href="https://journal.amouda.me/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Journal</span>
+                            <time class="project-year" datetime="2026">2026</time>
+                            <span class="project-desc">Local private journal, built with SvelteKit</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="ai-powered ai-assisted static">
+                        <a class="project-link" href="./jomobrief/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">JomoBrief</span>
+                            <time class="project-year" datetime="2026">2026</time>
+                            <span class="project-desc">Brief news digest, built with Angular & Tailwind</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="work">
+                        <a class="project-link" href="https://peopleindresden.de/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">People in Dresden</span>
+                            <time class="project-year" datetime="2022">2022</time>
+                            <span class="project-desc">Frontend for the People in Dresden Facebook page, built with Vue.js & Tailwind</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="uni static">
+                        <a class="project-link" href="./infovis/" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Sprachsynthese</span>
+                            <time class="project-year" datetime="2019">2019</time>
+                            <span class="project-desc">Information visualization uni project, built with Vue.js, TypeScript and Bootstrap</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="static training">
+                        <a class="project-link" href="./lakebledslovenia.html" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Lake Bled</span>
+                            <time class="project-year" datetime="2017">2017</time>
+                            <span class="project-desc">Small training project, built with CSS, jQuery and Materialize</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="static training">
+                        <a class="project-link" href="./shoppinglist/index.html" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Shopping List</span>
+                            <time class="project-year" datetime="2017">2017</time>
+                            <span class="project-desc">Angular training project with Bootstrap</span>
+                        </a>
+                    </li>
+                    <li class="project" data-tags="static uni">
+                        <a class="project-link" href="./eventkalender2015/eventkalender.html" target="_blank" rel="noopener noreferrer">
+                            <span class="project-name">Event Calendar</span>
+                            <time class="project-year" datetime="2014">2014</time>
+                            <span class="project-desc">First group uni project, built with vanilla HTML, CSS and JavaScript</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="empty-state" hidden>No project has all of these tags.</p>
+            </section>
+
+            <section id="panel-about" class="tab-panel prose" role="tabpanel" aria-labelledby="tab-about" tabindex="0" hidden>
+                <p>I'm a software developer who likes building software that's performant, secure, look good, and feel good to use.</p>
+                <p>I have a degree in Media Computer Science with a focus on human-computer interaction. I'm curious about how technology affects us and our perception, and enjoy reading books about those topics.</p>
+                <p>I've been developing professional web applications since 2017, and currently build and maintain medical software at <a href="https://spree.de/" target="_blank" rel="noopener noreferrer">tech@spree GmbH</a>.</p>
+            </section>
         </main>
 
         <script>
-            const tabs = document.querySelectorAll('[role="tab"]');
+            // ---------- Tabs ----------
+            const tabs = [...document.querySelectorAll('[role="tab"]')];
 
-            function activateTab(tab) {
-                const radio = document.getElementById(tab.htmlFor);
-                radio.checked = true;
-                tabs.forEach(t => {
-                    t.setAttribute('aria-selected', 'false');
-                    t.setAttribute('tabindex', '-1');
+            function selectTab(selectedTab) {
+                tabs.forEach(tab => {
+                    const isSelected = tab === selectedTab;
+                    tab.setAttribute('aria-selected', String(isSelected));
+                    tab.tabIndex = isSelected ? 0 : -1;
+                    document.getElementById(tab.getAttribute('aria-controls')).hidden = !isSelected;
                 });
-                tab.setAttribute('aria-selected', 'true');
-                tab.setAttribute('tabindex', '0');
             }
 
-            tabs.forEach((tab, i) => {
-                tab.addEventListener('keydown', e => {
-                    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-                        e.preventDefault();
-                        const dir = e.key === 'ArrowRight' ? 1 : -1;
-                        const next = tabs[(i + dir + tabs.length) % tabs.length];
-                        activateTab(next);
-                        next.focus();
-                    } else if (e.key === ' ' || e.key === 'Enter') {
-                        e.preventDefault();
-                        activateTab(tab);
-                    }
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => selectTab(tab));
+                tab.addEventListener('keydown', event => {
+                    const lastIndex = tabs.length - 1;
+                    const targetIndex = {
+                        ArrowRight: index === lastIndex ? 0 : index + 1,
+                        ArrowLeft: index === 0 ? lastIndex : index - 1,
+                        Home: 0,
+                        End: lastIndex,
+                    }[event.key];
+                    if (targetIndex === undefined) return;
+                    event.preventDefault();
+                    selectTab(tabs[targetIndex]);
+                    tabs[targetIndex].focus();
+                });
+            });
+
+            // ---------- Project tags + filters ----------
+            const TAG_ORDER = ['building', 'ai-powered', 'ai-assisted', 'full-stack', 'static', 'work', 'uni', 'training'];
+            // Shown when the URL has no ?tags= (an empty ?tags= means "all projects")
+            const DEFAULT_TAGS = ['building'];
+
+            const projects = [...document.querySelectorAll('.project')].map(element => ({
+                element,
+                tags: element.dataset.tags.split(' ').filter(Boolean),
+            }));
+            const filterBar = document.querySelector('.filter-bar');
+            const filterCount = document.querySelector('.filter-count');
+            const clearButton = document.querySelector('.clear-filters');
+            const emptyState = document.querySelector('.empty-state');
+            const selectedTags = new Set(readTagsFromUrl());
+
+            function readTagsFromUrl() {
+                const params = new URLSearchParams(location.search);
+                if (!params.has('tags')) return DEFAULT_TAGS;
+                return params.get('tags').split(',').filter(tag => TAG_ORDER.includes(tag));
+            }
+
+            function isDefaultSelection() {
+                return selectedTags.size === DEFAULT_TAGS.length
+                    && DEFAULT_TAGS.every(tag => selectedTags.has(tag));
+            }
+
+            function writeTagsToUrl() {
+                const url = new URL(location.href);
+                if (isDefaultSelection()) url.searchParams.delete('tags');
+                else url.searchParams.set('tags', [...selectedTags].join(','));
+                history.replaceState(null, '', url);
+            }
+
+            // Render tag chips inside each row, in a fixed order
+            projects.forEach(({ element, tags }) => {
+                const chipList = document.createElement('span');
+                chipList.className = 'tag-list';
+                chipList.setAttribute('aria-label', 'Tags');
+                TAG_ORDER.filter(tag => tags.includes(tag)).forEach(tag => {
+                    const chip = document.createElement('span');
+                    chip.className = 'tag';
+                    chip.textContent = tag;
+                    chipList.append(chip);
+                });
+                element.querySelector('.project-link').append(chipList);
+            });
+
+            // Render one toggle button per tag, with its project count
+            const filterButtons = TAG_ORDER.map(tag => {
+                const projectCount = projects.filter(project => project.tags.includes(tag)).length;
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'filter-toggle';
+                button.dataset.tag = tag;
+                button.innerHTML = `
+                    <span class="filter-label">${tag}</span>
+                    <span class="filter-total">${projectCount}</span>`;
+                button.addEventListener('click', () => {
+                    if (selectedTags.has(tag)) selectedTags.delete(tag);
+                    else selectedTags.add(tag);
+                    applyFilters();
+                });
+                filterBar.append(button);
+                return button;
+            });
+
+            clearButton.addEventListener('click', () => {
+                selectedTags.clear();
+                applyFilters();
+                filterButtons[0].focus();
+            });
+
+            function applyFilters() {
+                let visibleCount = 0;
+                projects.forEach(({ element, tags }) => {
+                    const matches = [...selectedTags].every(tag => tags.includes(tag));
+                    element.hidden = !matches;
+                    if (matches) visibleCount++;
                 });
 
-                tab.addEventListener('click', () => activateTab(tab));
-            });
+                filterButtons.forEach(button => {
+                    button.setAttribute('aria-pressed', String(selectedTags.has(button.dataset.tag)));
+                });
+
+                const hasFilters = selectedTags.size > 0;
+                filterCount.textContent = hasFilters
+                    ? `${visibleCount} of ${projects.length} projects`
+                    : `${projects.length} projects`;
+                clearButton.hidden = !hasFilters;
+                emptyState.hidden = visibleCount > 0;
+                writeTagsToUrl();
+            }
+
+            applyFilters();
         </script>
     </body>
 </html>
