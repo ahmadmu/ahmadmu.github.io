@@ -44,7 +44,7 @@
                 </div>
                 <p class="filter-status" aria-live="polite">
                     <span class="filter-count"></span>
-                    <button class="text-button soft clear-filters" type="button" hidden>clear filters</button>
+                    <button class="text-button soft show-all" type="button" hidden>show all</button>
                 </p>
 
                 <ul class="project-list">
@@ -127,7 +127,6 @@
                     </li>
                 </ul>
 
-                <p class="empty-state" hidden>No project has all of these tags.</p>
             </section>
 
             <section id="panel-about" class="tab-panel prose" role="tabpanel" aria-labelledby="tab-about" tabindex="0" hidden>
@@ -214,10 +213,10 @@
                 });
             });
 
-            // ---------- Project tags + filters ----------
+            // ---------- Project tags + filter (one tag at a time) ----------
             const TAG_ORDER = ['building', 'ai-powered', 'ai-assisted', 'full-stack', 'static', 'work', 'uni', 'training'];
-            // Shown when the URL has no ?tags= (an empty ?tags= means "all projects")
-            const DEFAULT_TAGS = ['building'];
+            // Shown when the URL has no ?tag= (an empty ?tag= means "all projects")
+            const DEFAULT_TAG = 'building';
 
             const projects = [...document.querySelectorAll('.project')].map(element => ({
                 element,
@@ -225,25 +224,20 @@
             }));
             const filterBar = document.querySelector('.filter-bar');
             const filterCount = document.querySelector('.filter-count');
-            const clearButton = document.querySelector('.clear-filters');
-            const emptyState = document.querySelector('.empty-state');
-            const selectedTags = new Set(readTagsFromUrl());
+            const showAllButton = document.querySelector('.show-all');
+            let selectedTag = readTagFromUrl();
 
-            function readTagsFromUrl() {
+            function readTagFromUrl() {
                 const params = new URLSearchParams(location.search);
-                if (!params.has('tags')) return DEFAULT_TAGS;
-                return params.get('tags').split(',').filter(tag => TAG_ORDER.includes(tag));
+                if (!params.has('tag')) return DEFAULT_TAG;
+                const tag = params.get('tag');
+                return TAG_ORDER.includes(tag) ? tag : null;
             }
 
-            function isDefaultSelection() {
-                return selectedTags.size === DEFAULT_TAGS.length
-                    && DEFAULT_TAGS.every(tag => selectedTags.has(tag));
-            }
-
-            function writeTagsToUrl() {
+            function writeTagToUrl() {
                 const url = new URL(location.href);
-                if (isDefaultSelection()) url.searchParams.delete('tags');
-                else url.searchParams.set('tags', [...selectedTags].join(','));
+                if (selectedTag === DEFAULT_TAG) url.searchParams.delete('tag');
+                else url.searchParams.set('tag', selectedTag ?? '');
                 history.replaceState(null, '', url);
             }
 
@@ -261,7 +255,7 @@
                 element.querySelector('.project-link').append(chipList);
             });
 
-            // Render one toggle button per tag, with its project count
+            // Render one button per tag, with its project count. Clicking the active tag shows all again.
             const filterButtons = TAG_ORDER.map(tag => {
                 const projectCount = projects.filter(project => project.tags.includes(tag)).length;
                 const button = document.createElement('button');
@@ -272,42 +266,39 @@
                     <span class="filter-label">${tag}</span>
                     <span class="filter-total">${projectCount}</span>`;
                 button.addEventListener('click', () => {
-                    if (selectedTags.has(tag)) selectedTags.delete(tag);
-                    else selectedTags.add(tag);
-                    applyFilters();
+                    selectedTag = selectedTag === tag ? null : tag;
+                    applyFilter();
                 });
                 filterBar.append(button);
                 return button;
             });
 
-            clearButton.addEventListener('click', () => {
-                selectedTags.clear();
-                applyFilters();
+            showAllButton.addEventListener('click', () => {
+                selectedTag = null;
+                applyFilter();
                 filterButtons[0].focus();
             });
 
-            function applyFilters() {
+            function applyFilter() {
                 let visibleCount = 0;
                 projects.forEach(({ element, tags }) => {
-                    const matches = [...selectedTags].every(tag => tags.includes(tag));
+                    const matches = selectedTag === null || tags.includes(selectedTag);
                     element.hidden = !matches;
                     if (matches) visibleCount++;
                 });
 
                 filterButtons.forEach(button => {
-                    button.setAttribute('aria-pressed', String(selectedTags.has(button.dataset.tag)));
+                    button.setAttribute('aria-pressed', String(button.dataset.tag === selectedTag));
                 });
 
-                const hasFilters = selectedTags.size > 0;
-                filterCount.textContent = hasFilters
+                filterCount.textContent = selectedTag
                     ? `${visibleCount} of ${projects.length} projects`
                     : `${projects.length} projects`;
-                clearButton.hidden = !hasFilters;
-                emptyState.hidden = visibleCount > 0;
-                writeTagsToUrl();
+                showAllButton.hidden = selectedTag === null;
+                writeTagToUrl();
             }
 
-            applyFilters();
+            applyFilter();
         </script>
     </body>
 </html>
