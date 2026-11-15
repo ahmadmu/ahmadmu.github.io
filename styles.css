@@ -376,31 +376,32 @@ button {
     font-weight: 600;
 }
 
+/* Two-column list: level sits right next to the longest language name */
 .language-list {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    width: fit-content;
+    max-width: 100%;
     margin-top: 1rem;
 }
 
 .language-list div {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    display: contents;
+}
+
+.language-list dt,
+.language-list dd {
     padding: 0.5rem 0;
     border-bottom: 1px solid var(--pill-hover);
 }
 
+.language-list dt {
+    padding-right: 2rem;
+    font-weight: 600;
+}
+
 .language-list dd {
     color: var(--muted);
-    text-align: right;
-}
-
-.prose a {
-    color: var(--primary);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-}
-
-.prose a:hover {
-    color: var(--text);
 }
 
 /* ---------- Transitions ---------- */
