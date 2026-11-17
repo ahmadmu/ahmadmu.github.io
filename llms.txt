@@ -1,0 +1,28 @@
+# Ahmad Moudallal
+
+> Full-stack developer in Berlin. Builds and maintains medical software at tech@spree GmbH, and builds personal web apps around books, language learning and well-being. Degree in Media IT from TU Dresden (2022), focused on UI/UX and human-computer interaction. Bookworm, polyglot, and host of the Berlin Book Swap.
+
+- Website: https://amouda.me/
+- GitHub: https://github.com/ahmadmu
+- LinkedIn (contact): https://linkedin.com/in/amouda
+
+## Apps
+
+- [BookCharts](https://bookcharts.amouda.me/): Book tracking and visualization app with reading analytics, charts and AI book recommendations. Built with Angular, Tailwind, Bun, Hono and PostgreSQL. Private use, but anyone can explore it with generated sample data via the "Try demo data" button in the header.
+- [Dailang](https://dailang.amouda.me/): Language learning tool for reading books in a foreign language and turning new words into flashcards. Built with Angular and Tailwind.
+- [Moodapy](https://moodapy.amouda.me/): Mood and habit tracker. Built with Angular and Tailwind.
+- [Color Combinations](https://colorcombinations.amouda.me/): Color palette selector based on Sanzo Wada's Dictionary of Color Combinations.
+- [Journal](https://journal.amouda.me/): Local, private journal. Built with SvelteKit.
+- [JomoBrief](https://amouda.me/jomobrief/): Brief news digest. Built with Angular and Tailwind.
+
+## Background
+
+- Developing professional web applications since 2017.
+- Has lived and studied in Germany since 2011.
+- Languages: Arabic (native), English (fluent), German (fluent), Japanese (good reading comprehension), Spanish (beginner), Portuguese (beginner).
+- Hosts the [Berlin Book Swap](https://www.meetup.com/de-de/berlinbookswap/) every two weeks: free, open to everyone.
+
+## Older projects
+
+- [Sprachsynthese](https://amouda.me/infovis/) (2018-2019): Information visualization uni project, built with Vue.js, TypeScript and Bootstrap.
+- [People in Dresden](https://peopleindresden.de/) (2022): Frontend for the People in Dresden Facebook page, built with Vue.js and Tailwind.

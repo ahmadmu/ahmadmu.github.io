@@ -1,0 +1,5 @@
+# Allow every crawler, search and AI agents included
+User-agent: *
+Allow: /
+
+Sitemap: https://amouda.me/sitemap.xml
