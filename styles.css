@@ -271,9 +271,19 @@ button {
 }
 
 .project-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'Epilogue', sans-serif;
     font-size: 1.25rem;
     line-height: 1.3;
+}
+
+/* App icon glyph only (manifest icon minus its background), cropped to the glyph */
+.project-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .project-year {
