@@ -280,10 +280,18 @@ button {
 }
 
 /* App icon glyph only (manifest icon minus its background), cropped to the glyph */
+/* Icons sit monochrome; app colours reveal on hover/focus */
 .project-icon {
     flex-shrink: 0;
     width: 1.5rem;
     height: 1.5rem;
+    filter: grayscale(1);
+    transition: filter 0.2s ease;
+}
+
+.project-link:hover .project-icon,
+.project-link:focus-visible .project-icon {
+    filter: none;
 }
 
 .project-year {
